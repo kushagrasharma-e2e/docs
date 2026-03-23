@@ -1,0 +1,400 @@
+.page {
+  padding: 0.8rem 0 2.5rem;
+}
+
+.hero,
+.filtersPanel,
+.resultsPanel,
+.noteCard,
+.emptyState {
+  border: 1px solid var(--doc-border-soft);
+  border-radius: 16px;
+  background: var(--doc-surface-raised);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 0.6rem;
+  padding: clamp(0.82rem, 1.5vw, 1.15rem);
+}
+
+.kicker,
+.summaryLabel {
+  display: inline-flex;
+  border-radius: 999px;
+  background: var(--doc-surface-muted);
+  color: var(--ifm-heading-color);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.36rem 0.58rem;
+  text-transform: uppercase;
+}
+
+.pageTitle {
+  margin: 0.55rem 0 0.4rem;
+  max-width: 10ch;
+  font-size: clamp(1.55rem, 4vw, 2.15rem);
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.pageSubtitle {
+  margin: 0;
+  max-width: 38rem;
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.86rem;
+  line-height: 1.52;
+}
+
+.heroSummary {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.heroSummary > div {
+  border: 1px solid var(--doc-border-soft);
+  border-radius: 14px;
+  background: var(--doc-surface-subtle);
+  padding: 0.78rem;
+}
+
+.heroSummary p {
+  margin: 0.4rem 0 0;
+  color: var(--ifm-font-color-base);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.filtersPanel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  padding: 0.78rem;
+}
+
+.filterField {
+  display: grid;
+  gap: 0.45rem;
+  position: relative;
+}
+
+.filterField label {
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.filterMenu {
+  position: relative;
+}
+
+.selectTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--doc-border-soft);
+  border-radius: 12px;
+  background: var(--doc-surface-subtle);
+  box-shadow: none;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.68rem 0.82rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.selectTrigger:hover {
+  border-color: var(--doc-border-strong);
+  background: var(--doc-surface-raised);
+}
+
+.selectTrigger:focus-visible,
+.selectTriggerOpen {
+  border-color: var(--doc-border-strong);
+  background: var(--doc-surface-raised);
+  box-shadow: 0 0 0 4px rgba(31, 143, 98, 0.08);
+}
+
+.selectValue {
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectChevron {
+  width: 1rem;
+  height: 1rem;
+  color: var(--ifm-font-color-secondary);
+  flex-shrink: 0;
+  transition: transform 0.18s ease;
+}
+
+.selectChevronOpen {
+  transform: rotate(180deg);
+}
+
+.selectContent {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: grid;
+  gap: 0.2rem;
+  border: 1px solid var(--doc-border-soft);
+  border-radius: 14px;
+  background: var(--doc-surface-raised);
+  box-shadow: var(--ifm-global-shadow-lw);
+  padding: 0.28rem;
+}
+
+.selectItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 38px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.62rem 0.72rem;
+  text-align: left;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.selectItem:hover,
+.selectItem:focus-visible {
+  background: var(--ifm-hover-overlay);
+  color: var(--ifm-heading-color);
+  outline: none;
+}
+
+.selectItemActive {
+  background: rgba(31, 143, 98, 0.1);
+  color: var(--ifm-heading-color);
+}
+
+.selectCheck {
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+}
+
+.resultsPanel {
+  margin-top: 0.6rem;
+  padding: clamp(0.82rem, 1.5vw, 1.1rem);
+}
+
+.resultsHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.resultsHeader p {
+  margin: 0;
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.resultsLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--doc-border-soft);
+  background: var(--doc-surface-raised);
+  color: var(--ifm-heading-color);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.56rem 0.74rem;
+  text-decoration: none;
+}
+
+.resultsLink:hover,
+.noteLink:hover,
+.inlineLink:hover {
+  color: var(--ifm-heading-color);
+  border-color: var(--doc-border-strong);
+}
+
+.notesList {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.noteCard {
+  padding: 0.82rem;
+}
+
+.noteHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.noteTitle {
+  margin: 0;
+  font-size: clamp(0.96rem, 1.7vw, 1.18rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.noteDate {
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.36rem;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--doc-surface-muted);
+  color: var(--ifm-heading-color);
+  font-size: 0.64rem;
+  font-weight: 800;
+  padding: 0.28rem 0.5rem;
+}
+
+.badgePlatform {
+  background: rgba(31, 143, 98, 0.1);
+}
+
+.badgeTag {
+  background: var(--doc-surface-muted);
+}
+
+.noteBody {
+  margin-top: 0.6rem;
+}
+
+.noteBody p {
+  margin: 0 0 0.5rem;
+  color: var(--ifm-font-color-base);
+  font-size: 0.86rem;
+  line-height: 1.52;
+}
+
+.inlineLink,
+.noteLink {
+  color: var(--ifm-color-primary);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.noteLink {
+  display: inline-flex;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.emptyState {
+  padding: 1rem;
+  text-align: center;
+}
+
+.emptyState h2 {
+  margin-bottom: 0.55rem;
+}
+
+.emptyState p {
+  margin: 0;
+  color: var(--ifm-font-color-secondary);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+
+.paginationButton {
+  border: 1px solid var(--doc-border-soft);
+  border-radius: 999px;
+  background: var(--doc-surface-subtle);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 0.5rem 0.7rem;
+}
+
+.paginationButton:hover:not(:disabled) {
+  border-color: var(--doc-border-strong);
+}
+
+.paginationButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.paginationButtonActive {
+  background: rgba(31, 143, 98, 0.12);
+  border-color: rgba(31, 143, 98, 0.18);
+  color: var(--ifm-heading-color);
+}
+
+.paginationEllipsis {
+  color: var(--ifm-font-color-secondary);
+  font-weight: 800;
+  padding: 0 0.2rem;
+}
+
+@media (max-width: 996px) {
+  .hero,
+  .filtersPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .filtersPanel,
+  .resultsPanel,
+  .noteCard,
+  .emptyState {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .resultsHeader,
+  .noteHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resultsLink {
+    width: 100%;
+  }
+}

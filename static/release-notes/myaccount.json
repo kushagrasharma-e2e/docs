@@ -1,0 +1,1490 @@
+[
+  {
+    "date": 1770123440,
+    "product": "Node",
+    "myaccount": true,
+    "tir": false,
+    "title": "E1 Series Windows Plans Launched in Chennai Region",
+    "details": [
+      "E1 series is now available for Windows plans in the Chennai region on MyAccount, enabling users to provision cost-efficient Windows nodes with optimized compute performance."
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/getting_started/#windows-virtual-node",
+    "tag": [
+      "E1WC"
+    ]
+  },
+  {
+    "date": 1769472000,
+    "product": "Load Balancer",
+    "myaccount": true,
+    "tir": false,
+    "title": "End-to-End SSL Support for Application Load Balancer Backends",
+    "details": [
+      "Application Load Balancer now supports end-to-end SSL, enabling encrypted traffic between the load balancer and backend servers. HTTPS backends can use self-signed certificates or certificates issued by an internal CA authority, ensuring secure communication without impacting existing routing or health check behavior."
+    ],
+    "to": "/docs/myaccount/appliance/Application-Load-Balancer/#target-mapping",
+    "tag": []
+  },
+  {
+    "date": 1767872550,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Log Storage Enhancement",
+    "details": [
+      "DBaaS service logs are now exported to EOS-based object storage for improved durability and long-term retention. This change does not impact database performance or availability. Existing access controls continue to apply."
+    ],
+    "to": "/docs/myaccount/database/manage_dbaas/#enable-dbaas-logs",
+    "tag": []
+  },
+  {
+    "date": 1767938292,
+    "product": "CDP Backup",
+    "myaccount": true,
+    "tir": false,
+    "title": "Enhanced Task History and Usage Reporting for CDP Backup",
+    "details": [
+      "We have enhanced CDP Backup to improve visibility into backup and restore operations. Backup and Restore Task History now display accurate start time, end time, and duration in IST. A new Backup Usage Report provides insights into total and incremental CDP usage, with support for date range filtering and CSV export, improving transparency and monitoring."
+    ],
+    "to": "/docs/myaccount/cdp_backups/management/",
+    "tag": []
+  },
+  {
+    "date": 1767272223,
+    "product": "Security Group",
+    "myaccount": true,
+    "tir": false,
+    "title": "CIDR and IP Whitelisting Support in Security Groups",
+    "details": [
+      "We are excited to announce support for standard CIDR notation in Security Groups, along with the ability to whitelist your own IP address. This improvement provides finer-grained control over inbound and outbound traffic, making it easier to restrict access to trusted networks and enhance overall security. "
+    ],
+    "to": "/docs/myaccount/network/security_grp/",
+    "tag": []
+  },
+  {
+    "date": 1766448000,
+    "product": "Node",
+    "myaccount": true,
+    "tir": false,
+    "title": "Schedule Snapshot of Node with Attached Volumes",
+    "details": [
+      "The Combined Scheduled Snapshot feature for a node and its attached volumes is now available, enabling automatic snapshot creation at predefined intervals. Users can choose a preferred execution time window and optionally include attached volumes. Snapshot schedules can be viewed, edited, or disabled at any time from the Snapshot section. This helps ensure regular backups with minimal manual effort."
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/snapshot/#schedule-snapshot",
+    "tag": []
+  },
+  {
+    "date": 1764852909,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "PostgreSQL Read Replica Promotion",
+    "details": [
+      "We are excited to introduce a new feature that enables the promotion of a PostgreSQL DBaaS Read Replica to a fully independent cluster. "
+    ],
+    "to": "/docs/myaccount/database/manage_dbaas/read_replica/",
+    "tag": []
+  },
+  {
+    "date": 1764185173,
+    "product": "Schedule Snapshot of Nodes,Volume,SFS And DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "Enhanced Snapshot Scheduling Options",
+    "details": [
+      "We have also introduced enhanced scheduling options for snapshots, allowing users to automate snapshot creation on a Daily, Weekly, or Monthly basis—including support for selecting specific days, dates, and even the Last Day of the month—providing greater control and flexibility in managing backup operations."
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/snapshot/#schedule-snapshot",
+    "tag": []
+  },
+  {
+    "date": 1764161142,
+    "product": "Disaster Recovery",
+    "myaccount": true,
+    "tir": false,
+    "title": "Disaster Recovery For E1 Series",
+    "details": [
+      "Disaster Recovery (DR) is now supported for E1 Series nodes, enabling seamless cross-region replication and reliable recovery. This enhancement ensures that applications running on E1 nodes remain resilient against regional outages "
+    ],
+    "to": "/docs/myaccount/disaster-recovery/create/",
+    "tag": []
+  },
+  {
+    "date": 1764157804,
+    "product": "E1 Series Nodes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Increase in Root Storage Size",
+    "details": [
+      "We have also introduced a new feature that enables users to increase the root storage size of E1 Series Nodes, offering greater flexibility in managing storage requirements based on their workload needs."
+    ],
+    "to": "/docs/myaccount/node/e1-series/#increase-in-root-storage-size",
+    "tag": []
+  },
+  {
+    "date": 1764217866,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "Multi-Region Read Replica",
+    "details": [
+      "We have introduced a new feature that allows users to create Read Replicas in regions different from their primary DBaaS. This enhancement makes cross-region scaling easier and ensures smooth replication. "
+    ],
+    "to": "/docs/myaccount/database/manage_dbaas/read_replica/",
+    "tag": []
+  },
+  {
+    "date": 1763629051,
+    "product": "Kubernetes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Support Added for Security Groups in Kubernetes",
+    "details": [
+      "We have introduced a new feature that allows users to easily attach or detach security groups with the Kubernetes. This enhancement provides better network control, improved workload isolation, and simplified management of security policies across clusters."
+    ],
+    "to": "/docs/myaccount/kubernetes/#security-group",
+    "tag": []
+  },
+  {
+    "date": 1763376431,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Hourly/Committed Upgrade",
+    "details": [
+      "We’re excited to announce Flexible Plan Upgrades for DBaaS — both Hourly and Committed.Easily scale CPU, RAM, and storage as your workloads grow, ensuring optimal performance and cost efficiency with seamless plan upgrades."
+    ],
+    "to": "/docs/myaccount/database/manage_dbaas/#upgrade-your-database",
+    "tag": []
+  },
+  {
+    "date": 1762952945,
+    "product": "Private Cluster",
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes in Private Cluster",
+    "details": [
+      "We are excited to announce the launch of Kubernetes inside Private Cluster — You can customize CPU, RAM, and storage configurations to precisely match your workload requirements — enabling optimal performance, scalability, and cost efficiency. "
+    ],
+    "to": "/docs/myaccount/private_cluster/kubernetes_in_private_cluster/",
+    "tag": []
+  },
+  {
+    "date": 1762214400,
+    "product": "Disaster Recovery",
+    "myaccount": true,
+    "tir": false,
+    "title": "Disaster Recovery",
+    "details": [
+      "Disaster Recovery (DR) for cross-region replication and recovery, ensuring your applications stay resilient and recoverable at any time."
+    ],
+    "to": "/docs/myaccount/disaster-recovery/",
+    "tag": []
+  },
+  {
+    "date": 1761844289,
+    "product": "Auto Scale",
+    "myaccount": true,
+    "tir": false,
+    "title": "Activity Timeline in Auto Scale",
+    "details": [
+      "We've added an Activity Timeline feature to Autoscale, enabling users to view detailed activity logs and track scaling events for better transparency and monitoring."
+    ],
+    "to": "/docs/myaccount/auto_scaling/GettingStarted/",
+    "tag": []
+  },
+  {
+    "date": 1761820107,
+    "product": "Security group in LB",
+    "myaccount": true,
+    "tir": false,
+    "title": "Load Balancer",
+    "details": [
+      "Configure the security group for the Load Balancer to control inbound and outbound traffic. Ensure only required ports (such as HTTP/HTTPS) are allowed and restrict access to trusted networks for enhanced security."
+    ],
+    "to": "/docs/myaccount/appliance/Application-Load-Balancer/#security-group",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1760690978,
+    "product": "Image",
+    "myaccount": true,
+    "tir": false,
+    "title": "Export Image In Different Region",
+    "details": [
+      "We are excited to introduce the Export Image of Node, which allows users to effortlessly transfer node images across regions. Users can export an image from  from Delhi to Chennai by choosing the desired destination region."
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/export_image/",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1760690978,
+    "product": "Volume",
+    "myaccount": true,
+    "tir": false,
+    "title": "Export Volume In Different Region",
+    "details": [
+      "We are thrilled to introduce the Export Volume feature in Volume, which enables users to seamlessly transfer volumes from Delhi to other regions. Users can export a volume from Delhi to Chennai by selecting the desired destination region."
+    ],
+    "to": "/docs/myaccount/storage/block_storage/export_volume/",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1760442525,
+    "product": "Kubernetes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Now Support Custom VPC & Subnet",
+    "details": [
+      "Kubernetes now allows users to choose a Custom VPC Subnet when configuring their cluster. Users can select the subnet associated with their Custom VPC."
+    ],
+    "to": "/docs/myaccount/kubernetes/#kubernetes-configuration-and-settings",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1760346000,
+    "product": "Load Balancer",
+    "myaccount": true,
+    "tir": false,
+    "title": "Support for Custom CIDR VPC with Subnet Option in Load Balancer",
+    "details": [
+      "Load Balancer now supports Custom CIDR and E2E-Provided IPv4 CIDR. This feature allows you to choose the subnet associated with your VPC, providing more control over your network configuration."
+    ],
+    "to": "/docs/myaccount/appliance/Network-Load-Balancer/#network"
+  },
+  {
+    "date": 1760346000,
+    "product": "Auto Scale",
+    "myaccount": true,
+    "tir": false,
+    "title": "Autoscale for E1 Series",
+    "details": [
+      "E1 Series images now support Autoscale, maintaining the same storage size and IOPS as the source node."
+    ],
+    "to": "/docs/myaccount/auto_scaling/e1-autoscale/",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1759293831,
+    "product": "IAM",
+    "myaccount": true,
+    "tir": false,
+    "title": "IAM User Group",
+    "details": [
+      "We are introducing IAM User Groups, a feature that allows you to manage multiple users as a single group. You can assign roles, policies, and project access to the group, simplifying permissions management and ensuring consistent access control across your projects "
+    ],
+    "to": "/docs/myaccount/GettingStarted/iam/#user-group",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1758518400,
+    "product": "Private Cluster",
+    "myaccount": true,
+    "tir": false,
+    "title": "Host Overcommit and Audit Logs",
+    "details": [
+      "Host overcommit allows allocating more virtual CPUs than the physical CPUs available on a host. Audit logs provide a comprehensive record of activities and cost-related information within the cluster. "
+    ],
+    "to": "/docs/myaccount/private_cluster/",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1758518398,
+    "product": "VPC",
+    "myaccount": true,
+    "tir": false,
+    "title": "VPC Peering",
+    "details": [
+      "We are introducing VPC Peering, which is a networking connection that allows two Virtual Private Clouds (VPCs) to communicate and route traffic between them securely using private IPv4 addresses."
+    ],
+    "to": "/docs/myaccount/network/vpc_peering/",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1758265998,
+    "product": "Kubernetes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Activity Timeline",
+    "details": [
+      "We’ve added an Activity Timeline feature to Kubernetes, providing a clear chronological view of all actions performed. Each entry includes timestamps and success/failure status, making it easier to track and review your cluster’s operational history. "
+    ],
+    "to": "/docs/myaccount/kubernetes/#activity-timeline",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1758265998,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "Support for Custom CIDR VPC with Subnet Option in DBaaS",
+    "details": [
+      "DBaaS now supports both Custom CIDR and E2E-Provided IPv4 CIDR. With Custom CIDR, you can select the subnet linked to your VPC for greater flexibility."
+    ],
+    "to": "/docs/myaccount/database/manage_dbaas/#network"
+  },
+  {
+    "date": 1757325156,
+    "product": "SFS",
+    "myaccount": true,
+    "tir": false,
+    "title": "Custom CIDR & E2E Provided IPv4 CIDR in SFS",
+    "details": [
+      "SFS now allows users to choose between Custom CIDR and E2E-Provided IPv4 CIDR. With Custom CIDR, you can choose the subnet associated with your VPC. "
+    ],
+    "to": "/docs/myaccount/storage/sfs/intro/",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1756918800,
+    "product": "Image",
+    "myaccount": true,
+    "tir": false,
+    "title": "Committed Node Plan Upgrade",
+    "details": [
+      "We’ve introduced the ability to upgrade plans for committed nodes in addition to hourly nodes. This enhancement provides more flexibility to adjust your resources as your workload demands grow, without being restricted to the original commitment. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/tutorials/committed_note/",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1756684800,
+    "product": "Image",
+    "myaccount": true,
+    "tir": false,
+    "title": "Import Image from Private EOS Bucket",
+    "details": [
+      "We’re excited to announce that you can now import images directly from a private EOS bucket by providing the bucket name along with Access Key and Secret Key. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/custom_image/#importing-an-image-to-e2e-cloud-platform-from-private-eos-bucket",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1756364612,
+    "product": "Nodes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Support for Multiple VPC Attachments on a Node",
+    "details": [
+      "Introducing support for multiple VPC attachments on a node — You can now attach up to three VPCs per node, with a maximum of two private IPs per VPC, allowing greater flexibility in managing network connectivity. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/managenode/#attach-vpc",
+    "tag": [
+      "New"
+    ]
+  },
+  {
+    "date": 1756270382,
+    "product": "Nodes",
+    "myaccount": true,
+    "tir": false,
+    "title": "E2E Networks Marketplace",
+    "details": [
+      "We are thrilled to announce the release of Marketplace, a comprehensive cloud platform designed to connect vendors and buyers—empowering rapid deployment of third-party applications, virtual machines, containers, SaaS, and licensed solutions directly on E2E Cloud infrastructure. "
+    ],
+    "to": "/docs/myaccount/node/marketplace/",
+    "tag": []
+  },
+  {
+    "date": 1756291200,
+    "product": "Image",
+    "myaccount": true,
+    "tir": false,
+    "title": "Export Image to EOS Bucket",
+    "details": [
+      "We are excited to announce that saved images can now be exported to an EOS bucket — making it easier to store, share, and reuse your images. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/create_image/#export-image-to-object-storage",
+    "tag": []
+  },
+  {
+    "date": 1756363038,
+    "product": "Private Cluster",
+    "myaccount": true,
+    "tir": false,
+    "title": "Auto Scale in Private Cluster",
+    "details": [
+      "We are excited to announce the launch of Auto Scale inside Private Cluster — Auto Scale can be configured with custom vCPU and RAM specifications to match your workload needs. "
+    ],
+    "to": "/docs/myaccount/private_cluster/auto_scale_in_private_cluster/",
+    "tag": []
+  },
+  {
+    "date": 1755587872,
+    "product": "Private Cluster",
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS in Private Cluster",
+    "details": [
+      "We are excited to announce the launch of DBaaS inside Private Cluster — DBaaS instances can now be deployed with custom vCPU and memory specifications, giving you the flexibility to optimize performance and cost according to your workload requirements. "
+    ],
+    "to": "/docs/myaccount/private_cluster/dbaas_in_private_cluster/",
+    "tag": []
+  },
+  {
+    "date": 1755161551,
+    "product": "Nodes",
+    "myaccount": true,
+    "tir": false,
+    "title": "New E1 Series in Node",
+    "details": [
+      "Added E1 Series Nodes with cost-optimized billing, flexible scaling, optional public IPs, and enhanced network performance. "
+    ],
+    "to": "/docs/myaccount/node/e1-series/",
+    "tag": []
+  },
+  {
+    "date": 1754894360,
+    "product": "WhatsApp Notification",
+    "myaccount": true,
+    "tir": false,
+    "title": "WhatsApp Notification for Monitoring Alerts",
+    "details": [
+      "We are excited to introduce WhatsApp notifications for monitoring alerts. This feature ensures that whenever a predefined monitoring alert, or one configured by the user for a specific service, is triggered, users instantly receive a WhatsApp message, enabling faster awareness and quicker action to resolve issues. "
+    ],
+    "to": "/docs/myaccount/billing/alerts_reminder_whatsapp/",
+    "tag": []
+  },
+  {
+    "date": 1754352000,
+    "product": "Private Cluster",
+    "myaccount": true,
+    "tir": false,
+    "title": "Load Balancer in Private Cluster",
+    "details": [
+      "We are excited to announce the launch of Load Balancer inside Private Cluster — Load Balancer can be configured with custom vCPU and memory specifications to match your workload needs. "
+    ],
+    "to": "/docs/myaccount/private_cluster/lb_in_private_cluster",
+    "tag": []
+  },
+  {
+    "date": 1754265605,
+    "product": "MyAccount",
+    "myaccount": true,
+    "tir": false,
+    "title": "MyAccount - Chennai Region Launch",
+    "details": [
+      "We're excited to announce that the MyAccount is now available in the Chennai region! This launch expands our reach and ensures improved performance, lower latency, and enhanced support for users in and around Chennai. "
+    ],
+    "to": "",
+    "tag": []
+  },
+  {
+    "date": 1753693914,
+    "product": "VPC",
+    "myaccount": true,
+    "tir": false,
+    "title": "Custom CIDR & E2E Provided IPv4 CIDR",
+    "details": [
+      "We're thrilled to announce that users now have the flexibility to choose between Custom CIDR and E2E Provided IPv4 CIDR. With the Custom CIDR option, users can create VPCs using private IP ranges and configure subnets for greater control over their network setup. "
+    ],
+    "to": "/docs/myaccount/network/vpc/",
+    "tag": []
+  },
+  {
+    "date": 1753344288,
+    "product": "Private Cluster",
+    "myaccount": true,
+    "tir": false,
+    "title": "Node in Private Cluster",
+    "details": [
+      "We are excited to announce the launch of Node inside Private Cluster — Nodes can be configured with custom vCPU and memory specifications to match your workload needs. "
+    ],
+    "to": "/docs/myaccount/private_cluster/node_in_private_cluster",
+    "tag": []
+  },
+  {
+    "date": 1753344288,
+    "product": "Private Cluster",
+    "myaccount": true,
+    "tir": false,
+    "title": "Private Cluster",
+    "details": [
+      "We are excited to announce the launch of Private Cluster — a secure and isolated computing environment where nodes are deployed without exposure to public networks. This feature offers enhanced security, performance, and full control over network configurations and node deployments. "
+    ],
+    "to": "/docs/myaccount/private_cluster/",
+    "tag": []
+  },
+  {
+    "date": 1753191127,
+    "product": "Load Balancer",
+    "myaccount": true,
+    "tir": false,
+    "title": "Load Balancer Encryption",
+    "details": [
+      "We are excited to announce the introduction of encryption support for LoadBalancer. This new feature enhances the security of network traffic by allowing users to enable encryption at the time of LoadBalancer creation. "
+    ],
+    "to": "/docs/myaccount/appliance/LoadBalancerEncryption/",
+    "tag": []
+  },
+  {
+    "date": 1751623083,
+    "product": "SFS",
+    "myaccount": true,
+    "tir": false,
+    "title": "SFS Encryption",
+    "details": [
+      "We are excited to announce the introduction of encryption support for SFS (Shared File System). This feature enhances data security by allowing users to enable encryption at the time of SFS creation. "
+    ],
+    "to": "/docs/myaccount/storage/sfs/intro/#introduction-to-sfs-encryption",
+    "tag": []
+  },
+  {
+    "date": 1751648688,
+    "product": "Object Storage",
+    "myaccount": true,
+    "tir": false,
+    "title": "EOS Encryption",
+    "details": [
+      "You can now enable encryption for your EOS buckets. When creating a bucket in the E2E Object Storage service, encryption check box is enabled by default-ensuring that all objects stored within are automatically encrypted using E2E-managed keys. "
+    ],
+    "to": "/docs/myaccount/storage/object_storage/EOSEncryption/",
+    "tag": []
+  },
+  {
+    "date": 1750754986,
+    "product": "Support Ticket",
+    "myaccount": true,
+    "tir": false,
+    "title": "Resource Listing in Tickets",
+    "details": [
+      "A new resource dropdown has been added to the Cloud Platform Ticket form. This allows users to optionally select the relevant resource while raising a ticket. Previously, users had to manually specify the resource in the description field. "
+    ],
+    "to": "/docs/myaccount/others/support_tickets",
+    "tag": []
+  },
+  {
+    "date": 1751535622,
+    "product": "Auto Scale",
+    "myaccount": true,
+    "tir": false,
+    "title": "Auto Scale Encryption",
+    "details": [
+      "We're thrilled to announce the launch of the Autoscale Encryption feature.This powerful enhancement enables users to protect data on Nodes within Autoscaling Groups using advanced, industry-standard full-disk encryption methods. By enabling Autoscale Encryption, all data at rest on the Nodes is automatically encrypted, ensuring that sensitive information remains secure even in dynamic scaling environments.This feature significantly enhances the security posture of your Autoscaling infrastructure while also helping meet data protection and compliance requirements with ease. "
+    ],
+    "to": "/docs/myaccount/auto_scaling/auto_scale_encryption/",
+    "tag": []
+  },
+  {
+    "date": 1751241600,
+    "product": "Floating IP",
+    "myaccount": true,
+    "tir": false,
+    "title": "Floating IP",
+    "details": [
+      "We're excited to announce the launch of Floating IP within Reserve IP. Users can now attach a Floating IP to up to 4 nodes, enabling greater flexibility, high availability, and improved reliability in their network setup. "
+    ],
+    "to": "/docs/myaccount/network/reserve_ip/#use-reserve-ip-as-floating-ip",
+    "tag": []
+  },
+  {
+    "date": 1751241600,
+    "product": "Alert Pause and Resume",
+    "myaccount": true,
+    "tir": false,
+    "title": "Pause and Resume Alerts",
+    "details": [
+      "We're thrilled to announce support for pause or resume alerts on demand using a single action. Useful for temporarily silencing notifications during maintenance or expected changes. "
+    ],
+    "to": "/docs/myaccount/monitoring/introduction/#pause-and-resume-alerts",
+    "tag": []
+  },
+  {
+    "date": 1751241600,
+    "product": "Nodes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Node New Trigger Volume Read-ops/Write-ops",
+    "details": [
+      "We're thrilled to announce support for alerts  on Node Volume Read and Write operations. This helps monitor I/O-heavy nodes and receive notifications when thresholds are crossed. "
+    ],
+    "to": "/docs/myaccount/node/monitoring/introduction/#types-of-trigger-parameters",
+    "tag": []
+  },
+  {
+    "date": 1751241600,
+    "product": "Nodes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Activity Timeline in Audit Logs of Node",
+    "details": [
+      "A new Activity Timeline tab has been introduced in the Audit Logs section of the Node. It presents a clear, chronological view of all actions performed on the node, along with their timestamps and success/failure status indicators. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/managenode/#audit-log",
+    "tag": []
+  },
+  {
+    "date": 1750291200,
+    "product": "FaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "GPU Functions",
+    "details": [
+      "We're excited to announce support for GPU-based functions. Now you can run serverless workloads that require GPU acceleration—ideal for machine learning, AI inference, and high-performance computing—directly on our Functions platform. "
+    ],
+    "to": "/docs/myaccount/functions/faas/#gpu-hardware-option",
+    "tag": []
+  },
+  {
+    "date": 1750228042,
+    "product": "Image",
+    "myaccount": true,
+    "tir": false,
+    "title": "Import Windows Custom Image",
+    "details": [
+      "We're excited to announce support for importing Windows custom images. This feature allows you to bring your own pre-configured Windows images to our platform, enabling faster, consistent, and more flexible deployments. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/custom_image/#importing-an-image-to-e2e-cloud-platform",
+    "tag": []
+  },
+  {
+    "date": 1749472704,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Encryption",
+    "details": [
+      "We are excited to announce the launch of the DBaaS Encryption feature. This powerful enhancement enables users to safeguard their database data using advanced, industry-standard encryption techniques. By enabling DBaaS Encryption, all sensitive data stored within your managed databases is securely encrypted at rest, adding an extra layer of protection against unauthorized access. This feature also helps ensure compliance with data security regulations and strengthens the overall security of your DBaaS environment. "
+    ],
+    "to": "/docs/myaccount/database/DBaaSEncryption",
+    "tag": []
+  },
+  {
+    "date": 1749114319,
+    "product": "Kubernetes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Encryption",
+    "details": [
+      "We are excited to announce the launch of the Kubernetes Encryption feature. This powerful enhancement enables users to safeguard data within their Kubernetes clusters using advanced, industry-standard encryption techniques. By enabling Kubernetes Encryption, you can ensure that all sensitive cluster data is securely encrypted at rest, providing an additional layer of protection against unauthorized access. This feature helps you maintain compliance with security regulations and reinforces the overall security of your Kubernetes environment. "
+    ],
+    "to": "/docs/myaccount/kubernetes/KubernetesEncryption",
+    "tag": []
+  },
+  {
+    "date": 1748563200,
+    "product": "FaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "Functions(FaaS)",
+    "details": [
+      "We're excited to unveil Functions, our Function-as-a-Service (FaaS) platform designed to take the complexity out of deploying and managing backend logic. With Functions, developers can run event-driven functions in a fully serverless environment — no infrastructure to maintain, no servers to provision. "
+    ],
+    "to": "/docs/myaccount/functions/",
+    "tag": []
+  },
+  {
+    "date": 1748330156,
+    "product": "Volumes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Import Volume",
+    "details": [
+      "We are thrilled to introduce the Import Volume feature in Volume, which enables users to bring external volumes into our E2E Volume seamlessly. "
+    ],
+    "to": "/docs/myaccount/storage/block_storage/intro/#import-volume",
+    "tag": []
+  },
+  {
+    "date": 1748258337,
+    "product": "Object Storage",
+    "myaccount": true,
+    "tir": false,
+    "title": "Enabling Object Lock In Object Storage",
+    "details": [
+      "Object Lock is now supported in E2E Object Storage, enabling Governance and Legal Hold for protecting objects from deletion or modification. "
+    ],
+    "to": "/docs/myaccount/storage/object_storage/object_lock",
+    "tag": []
+  },
+  {
+    "date": 1748007142,
+    "product": "Nodes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Node Encryption",
+    "details": [
+      "We are pleased to announce the release of the Node Encryption feature. This new enhancement allows users to secure data at the node level using robust, industry-standard encryption methods. By enabling Node Encryption, you can ensure that sensitive information remains protected throughout its lifecycle, helping you meet compliance requirements and strengthen your overall security posture. "
+    ],
+    "to": "/docs/myaccount/node/NodeEncryption",
+    "tag": []
+  },
+  {
+    "date": 1748007142,
+    "product": "Volumes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Volume Encryption",
+    "details": [
+      "We are pleased to announce the release of the Volume Encryption feature. This powerful new capability enables users to encrypt data at the volume level, providing enhanced security for stored data without compromising performance. With Volume Encryption, you can protect your persistent storage against unauthorized access and ensure that your data remains secure both at rest and during use. It's an essential feature for organizations handling sensitive workloads or operating in regulated environments. "
+    ],
+    "to": "/docs/myaccount/storage/volume_encryption",
+    "tag": []
+  },
+  {
+    "date": 1747823359,
+    "product": "Volumes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Volume Committed",
+    "details": [
+      "We are pleased to announce the release of the Committed Plan feature in Volume. Users can now select a plan that best fits their needs. "
+    ],
+    "to": "/docs/myaccount/storage/block_storage",
+    "tag": []
+  },
+  {
+    "date": 1747391160,
+    "product": "E2E Secrets Management",
+    "myaccount": true,
+    "tir": false,
+    "title": "E2E Secrets Management",
+    "details": [
+      "E2E Secrets Management (Vault as a Service) is a secure, end-to-end solution designed to manage, store, and access sensitive Secrets such as API keys, passwords, certificates, and encryption keys. It provides a Vault as a Service model, abstracting the complexity of deploying and maintaining your own Secrets store infrastructure. "
+    ],
+    "to": "/docs/myaccount/e2eSecrets",
+    "tag": []
+  },
+  {
+    "date": 1746729000,
+    "product": "Nodes",
+    "myaccount": true,
+    "tir": false,
+    "title": "Windows 2025 ",
+    "details": [
+      "We are excited to announce the launch of Windows 2025 version on our Windows nodes! "
+    ],
+    "to": "/docs/myaccount/node",
+    "tag": []
+  },
+  {
+    "date": 1746535758,
+    "product": "Object Storage",
+    "myaccount": true,
+    "tir": false,
+    "title": "Object Storage",
+    "details": [
+      "We're thrilled to announce an enhancement to Object Storage: support for object versions. You can now view object versions directly in the MyAccount Object section. This improvement significantly enhances visibility and control over stored data, allowing users to track and manage file changes more effectively. "
+    ],
+    "to": "/docs/myaccount/storage/object_storage/bucket_details/",
+    "tag": []
+  },
+  {
+    "date": 1746096351,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS",
+    "details": [
+      "We are excited to announce a new feature in DBaaS. Read Replicas can now be promoted to Master nodes. This enhancement significantly improves the availability and resilience of database services. "
+    ],
+    "to": "/docs/myaccount/database/manage_dbaas/#how-to-promote-read-replica-to-master-node",
+    "tag": []
+  },
+  {
+    "date": 1744695287,
+    "product": "Container Registry",
+    "myaccount": true,
+    "tir": false,
+    "title": "Container Registry",
+    "details": [
+      "We've added support for multiple container registries, allowing you to manage them with individual access tokens as needed. "
+    ],
+    "to": "/docs/myaccount/container_registry/",
+    "tag": []
+  },
+  {
+    "date": 1744355311,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS OpenSearch",
+    "details": [
+      "We're excited to announce the launch of DBaaS OpenSearch, delivering fully managed, scalable, and secure search and analytics capabilities. "
+    ],
+    "to": "/docs/myaccount/database/openSearch",
+    "tag": []
+  },
+  {
+    "date": 1744292767,
+    "product": "SFS",
+    "myaccount": true,
+    "tir": false,
+    "title": "SFS Committed Plans",
+    "details": [
+      "We're excited to announce the launch of the SFS Committed Plans! These new plans offers cost-effective, long-term pricing options for our Scalable File Storage (SFS) service. "
+    ],
+    "to": "/docs/myaccount/storage/sfs/intro/#convert-to-committed",
+    "tag": []
+  },
+  {
+    "date": 1742295200,
+    "product": "Billing",
+    "myaccount": true,
+    "tir": false,
+    "title": "Project Based Usage Details",
+    "details": [
+      "We're excited to introduce Project-Based Usage Details in the My Account section. A new 'Project Name' column has been added to the Usage Details table, allowing users to view and filter service usage based on specific projects. "
+    ],
+    "to": "/docs/myaccount/billing/view_account_statements/#usage-details",
+    "tag": []
+  },
+  {
+    "date": 1742206550,
+    "product": "Manage Customer Profile",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Manage Account Profile Page Revamp",
+    "details": [
+      "We've given the Manage Customer Profile page in Billing a complete makeover! With a sleek, intuitive design, managing customer profiles is now faster, easier, and smoother than ever—get ready for a whole new level of managing bliss! "
+    ],
+    "to": "/docs/myaccount/billing/details/"
+  },
+  {
+    "date": 1740531385,
+    "product": "VPC",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "VPC Creation Revamp",
+    "details": [
+      "We're thrilled to announce an update to our VPC creation process. The interface has been redesigned to be cleaner and more user-friendly. Try it out and experience how effortless it is to create and manage your VPCs. "
+    ],
+    "to": "/docs/myaccount/network/vpc/"
+  },
+  {
+    "date": 1740531385,
+    "product": "VPC",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "VPC Committed Plans",
+    "details": [
+      "We are excited to introduce the VPC Committed Plan, allowing users to reserve VPC resources at a discounted rate for a fixed duration. This plan provides cost savings and predictable billing for long-term workloads. Automatic Renewal: Option to enable auto-renewal for uninterrupted service. "
+    ],
+    "to": "/docs/myaccount/network/vpc/"
+  },
+  {
+    "date": 1740379929,
+    "product": "DBaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Committed Plans",
+    "details": [
+      "Introducing DBaaS Committed Plans on the E2E Networks platform! Optimize your costs with committed plans for all DBaaS. Enjoy flexible, budget-friendly solutions to streamline Database workload management. "
+    ],
+    "to": "/docs/myaccount/database/database_committed/"
+  },
+  {
+    "date": 1737629070,
+    "product": "Kubernetes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Creation Revamp",
+    "details": [
+      "We're thrilled to announce an update to our Kubernetes cluster creation process! The interface has been redesigned to be cleaner and more customer-centric. Setting up your first cluster is now faster and simpler than ever. Try it out and experience how effortless it is to create Kubernetes clusters! "
+    ],
+    "to": "/docs/myaccount/kubernetes/#getting-started"
+  },
+  {
+    "date": 1736329883,
+    "product": "Nodes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Bulk Actions on Nodes",
+    "details": [
+      "Introducing the Bulk Actions on Nodes feature – now you can select and manage multiple nodes simultaneously, saving time and effort. Whether you are powering off, rebooting, or locking the nodes, this feature empowers you to handle up to 10 nodes at once with a single click. Experience the convenience of managing multiple nodes effortlessly. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/managenode/#bulk-actions-on-nodes"
+  },
+  {
+    "date": 1734002037,
+    "product": "DBaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Creation Revamp",
+    "details": [
+      "We're thrilled to announce a significant update to our Database as a Service (DBaaS) platform! The creation process now boasts a revamped interface with streamlined workflows and improved navigation, making your experience smoother and more efficient than ever. Start exploring the enhanced DBaaS platform today and enjoy a faster, more intuitive journey to create your databases effortlessly! "
+    ],
+    "to": "/docs/myaccount/database/mySQL/#how-to-create-a-mysql-database"
+  },
+  {
+    "date": 1733319010,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Event Monitoring",
+    "details": [
+      "Introducing Event Monitoring by E2E Networks, a robust alert service designed for users to efficiently manage resource statuses. Create scalable, reliable alerts to stay updated on resource changes in real time. "
+    ],
+    "to": "/docs/myaccount/monitoring/"
+  },
+  {
+    "date": 1732716000,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Support Platform New UI",
+    "details": [
+      "Explore our redesigned support platform for Cloud and Priority platforms, now offering a smoother and more intuitive user experience. "
+    ],
+    "to": "/docs/myaccount/others/support_tickets/"
+  },
+  {
+    "date": 1732082137,
+    "product": "Kubernetes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Committed Plans",
+    "details": [
+      "Introducing Kubernetes Committed Plans on the E2E Networks platform! Optimize your costs with committed plans for both Master Nodes and Worker Node Pools. Enjoy flexible, budget-friendly solutions to streamline Kubernetes workload management. "
+    ],
+    "to": "/docs/myaccount/kubernetes/kubernetes_committed/"
+  },
+  {
+    "date": 1730196099,
+    "product": "DBaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS (Kafka) Release Update",
+    "details": [
+      "We are excited to announce that now user can also see topic level monitoring in Kafka Database. "
+    ],
+    "to": "/docs/myaccount/database/apache_kafka/monitoring"
+  },
+  {
+    "date": 1731390937,
+    "product": "Load Balancer",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Load Balancer Committed Plans",
+    "details": [
+      "Committed Plans for Load Balancers are here! Save more by switching to a committed-term plan and enjoy significant discounts over hourly billing. "
+    ],
+    "to": "/docs/myaccount/appliance/lb_committed/"
+  },
+  {
+    "date": 1731995737,
+    "product": "Storage",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "E2E Parallel File System",
+    "details": [
+      "We're proud to unveil EPFS, our high-performance parallel file system designed for large-scale data processing and analytics. Experience unmatched efficiency for your data-driven workloads. "
+    ],
+    "to": "/docs/myaccount/storage/epfs/"
+  },
+  {
+    "date": 1730109699,
+    "product": "FaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "FaaS with GPU",
+    "details": [
+      "We're excited to announce the new FaaS (Function-as-a-Service) GPU Compatibility Templates feature! With our new GPU-compatible templates using CUDA, PyTorch, and TensorFlow, users can now create their own functions optimized for GPU resources effortlessly. "
+    ],
+    "to": "/docs/myaccount/functions/faas"
+  },
+  {
+    "date": 1729850499,
+    "product": "FaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "FaaS Serverless Functions",
+    "details": [
+      "We are excited to introduce the FaaS (Function-as-a-Service) Monitoring feature, designed to enhance visibility and observability of serverless functions in your environment. This feature brings robust capabilities to help you better understand and optimize your FaaS workloads. "
+    ],
+    "to": "/docs/myaccount/functions/faas"
+  },
+  {
+    "date": 1729764099,
+    "product": "CDP Backup",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "CDP Backup Release Update",
+    "details": [
+      "We are excited to announce that users can now restore backup points to any other node that has the same OS Plan and an active CDP backup. "
+    ],
+    "to": "/docs/myaccount/cdp_backups/#browse"
+  },
+  {
+    "date": 1729764099,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Resource Transfer Release Update",
+    "details": [
+      "We are excited to announce the release of the Resource Transfer feature for Dbaas and Parameter group. Now you can seamlessly transfer your Dbaas and Parameter Groups from one project to another within the same CRN. "
+    ],
+    "to": "/docs/myaccount/resourcetransfer/resource_transfer"
+  },
+  {
+    "date": 1727172099,
+    "product": "FaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "FaaS (Update System Configuration) Release Update",
+    "details": [
+      "We are excited to announce a new feature in Function as a Service (FaaS) that allows customers to update the memory and timeout settings for their functions. "
+    ],
+    "to": "https://docs.e2enetworks.com/"
+  },
+  {
+    "date": 1727222400,
+    "product": "DBaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "Valkey DBaaS Release Update",
+    "details": [
+      "We are excited to announce a new feature in Function as a Service (FaaS) that allows customers to update the memory and timeout settings for their functions. "
+    ],
+    "to": "https://docs.e2enetworks.com/",
+    "tag": []
+  },
+  {
+    "date": 1727085699,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Support ticket Release Update",
+    "details": [
+      "We are excited to announce a new feature that allows customers to add CC emails when creating tickets, enabling them to include their IAMs in the email thread. "
+    ],
+    "to": "https://docs.e2enetworks.com/"
+  },
+  {
+    "date": 1727240410,
+    "product": "DBaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Valkey Release Update",
+    "details": [
+      "We are excited to announce the release of the Valkey DBaaS on our MyAccount platform. This new feature is now available for all users to access and utilize. "
+    ],
+    "to": "https://docs.e2enetworks.com/"
+  },
+  {
+    "date": 1725876099,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Account Statement UI Update",
+    "details": [
+      "We are excited to announce a comprehensive revamp of the Account Statement feature, providing an enhanced experience with new functionality and improvements. "
+    ],
+    "to": "/docs/myaccount/billing/view_account_statements"
+  },
+  {
+    "date": 1725530499,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Resource Transfer Release Update",
+    "details": [
+      "We are pleased to announce the release of the Resource Transfer feature for Nodes, Images, Volumes, and Reserved IPs. Now you can seamlessly transfer your resources from one project to another within the same CRN. "
+    ],
+    "to": "/docs/myaccount/resourcetransfer/resource_transfer"
+  },
+  {
+    "date": 1723456899,
+    "product": "FaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "FaaS (Function as a Service) Release Update",
+    "details": [
+      "We are pleased to announce a new feature in our FaaS (Function as a Service) platform that allows users to download logs for specific functions. You can now easily select the desired date and time to retrieve and download logs, providing greater control and precision in your analysis and troubleshooting efforts. "
+    ],
+    "to": "/docs/myaccount/functions/faas"
+  },
+  {
+    "date": 1721901699,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Owner Email Change feature Release Update",
+    "details": [
+      "We are excited to announce the release of the Owner Email change feature on the MyAccount platform. This new feature allows users to change the Owner Email Address associated with their account. "
+    ],
+    "to": "/docs/myaccount/others/owner_email_change"
+  },
+  {
+    "date": 1721210499,
+    "product": "Kubernetes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Release Update",
+    "details": [
+      "We are thrilled to announce that we have released Kubernetes versions 1.30 for Delhi-NCR region. "
+    ],
+    "to": "/docs/myaccount/kubernetes/GettingStarted"
+  },
+  {
+    "date": 1721210499,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Audit Log Release Update",
+    "details": [
+      "We are excited to announce the addition of a new feature “Mail Logs” in Audit Logs. Using this feature, customers can conveniently receive logs via email. "
+    ],
+    "to": "/docs/myaccount/security/auditlogs"
+  },
+  {
+    "date": 1721210499,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Audit Log Release Update",
+    "details": [
+      "We are pleased to inform that we have revamped the Audit Logs page. This update brings a more intuitive interface, improving navigation and access to key information. "
+    ],
+    "to": "/docs/myaccount/security/auditlogs"
+  },
+  {
+    "date": 1720432899,
+    "product": "DBaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Release Update",
+    "details": [
+      "We are thrilled to announce the release of Expand Disk Size feature for DBaaS, now users can upgrade the disk size without upgrading the DBaaS. "
+    ],
+    "to": "/docs/myaccount/database/manage_dbaas#expand-disk-size"
+  },
+  {
+    "date": 1720087299,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "SignUp Release Update",
+    "details": [
+      "We are thrilled to announce that our Indian customers can now request an OTP via a voice call if they do not receive it through SMS after two attempts. "
+    ],
+    "to": "/docs/myaccount/GettingStarted/Indian_customer_Signup"
+  },
+  {
+    "date": 1719223299,
+    "product": "DBaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Release Update",
+    "details": [
+      "We are thrilled to announce the release of parameter groups for MariaDB versions 10.6 and 10.11, Now user can use the parameter group for these version as well. "
+    ],
+    "to": "/docs/myaccount/database/parameter-group/"
+  },
+  {
+    "date": 1718791299,
+    "product": "Nodes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Node Release Update",
+    "details": [
+      "We are excited to announce the launch of our newly redesigned Node Upgrade section, delivering an enhanced user experience. Our team has invested substantial effort to ensure that interacting with the platform is now smoother and more enjoyable than ever before. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/managenode/"
+  },
+  {
+    "date": 1718272899,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "PayNow Release Update",
+    "details": [
+      "We are excited to announce the latest improvements to the PayNow UI, designed to enhance user experience and streamline the payment process. "
+    ],
+    "to": "/docs/myaccount/billing/payment_method"
+  },
+  {
+    "date": 1718100099,
+    "product": "Nodes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "GPU UI Release Update",
+    "details": [
+      "We are excited to announce the launch of our newly redesigned GPU Creation feature, delivering an enhanced user experience. Our team has invested substantial effort to ensure that interacting with the platform is now smoother and more enjoyable than ever before. "
+    ],
+    "to": "/docs/myaccount/gpu/get_started"
+  },
+  {
+    "date": 1717754499,
+    "product": "Storage",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Object Storage Release Update",
+    "details": [
+      "We're excited to announce the new Presigned URL feature in Object Storage. This allows users to generate presigned URLs for files in their buckets, enabling direct download or upload of files via these URLs. Users can now easily integrate upload presigned URLs into their code for seamless file uploads. "
+    ],
+    "to": "/docs/myaccount/storage/object_storage/actions#presigned-url"
+  },
+  {
+    "date": 1717668099,
+    "product": "Nodes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Node UI Release Update",
+    "details": [
+      "We are pleased to inform that we have revamped the Node details page. This update features a more intuitive interface, improving navigation and access to key information. The enhancements are designed to provide a more efficient and enjoyable user experience. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/managenode"
+  },
+  {
+    "date": 1717581699,
+    "product": "Kubernetes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Release Update",
+    "details": [
+      "We are thrilled to announce that we have introduced new features in Kubernetes giving users more control and visibility. Users can perform actions on worker nodes like powering the node on/off and rebooting the node and also, see the audit logs for creation/deletion of Persistent Volume in Kubernetes. "
+    ],
+    "to": "/docs/myaccount/kubernetes/#getting-started"
+  },
+  {
+    "date": 1715335299,
+    "product": "Kubernetes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Release Update",
+    "details": [
+      "We are thrilled to announce that we have released Kubernetes versions 1.27 for Delhi-NCR-2 region. "
+    ],
+    "to": "/docs/myaccount/kubernetes/#getting-started"
+  },
+  {
+    "date": 1715248899,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "SignUp payment validation Release Update",
+    "details": [
+      "We are thrilled to introduce the addition of the Stripe payment gateway option for Indian customers during the signup process. Now, Indian customers have the choice between both Stripe and Razorpay for payment validation. "
+    ],
+    "to": "/docs/myaccount/GettingStarted/Indian_customer_Signup"
+  },
+  {
+    "date": 1714644099,
+    "product": "Nodes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Node UI Release Update",
+    "details": [
+      "We are excited to announce the launch of our newly redesigned Node Creation feature, delivering an enhanced user experience. Our team has invested substantial effort to ensure that interacting with the platform is now smoother and more enjoyable than ever before. "
+    ],
+    "to": "/docs/myaccount/node/virt_comp_node/getting_started"
+  },
+  {
+    "date": 1714644099,
+    "product": "Load Balancer",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Load Balancer Release Update",
+    "details": [
+      "We are thrilled to announce the latest enhancement to our Load Balancer (LB) feature. Users can now add multiple backends and multiple ACL rules simultaneously. "
+    ],
+    "to": "/docs/myaccount/appliance/Application-Load-Balancer/#acl"
+  },
+  {
+    "date": 1713434499,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "MyAccount header section Release Update",
+    "details": [
+      "We're excited to introduce UI enhancements to the header of the “My Account” section. These updates improve accessibility, making it easier for customers to navigate and access their accounts seamlessly. "
+    ],
+    "to": "https://myaccount.e2enetworks.com/"
+  },
+  {
+    "date": 1712916099,
+    "product": "Kubernetes",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Kubernetes Release Update",
+    "details": [
+      "We are thrilled to announce the release of Kubernetes versions 1.28 and 1.29! in Delhi NCR region. "
+    ],
+    "to": "/docs/myaccount/kubernetes/#getting-started"
+  },
+  {
+    "date": 1711706499,
+    "product": "FaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "FaaS (Function as a Service) Release Update",
+    "details": [
+      "We are thrilled to announce the release of our Secret feature in Function as a Service (FaaS). With this functionality, customers can now run their functions securely and confidentially. "
+    ],
+    "to": "/docs/myaccount/functions/faas"
+  },
+  {
+    "date": 1711706499,
+    "product": "FaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "FaaS (Function as a Service) Release Update",
+    "details": [
+      "We are excited to announce the release of the Upload feature in Function as a Service (FaaS). With this functionality, customers can easily upload their existing functions. "
+    ],
+    "to": "/docs/myaccount/functions/faas"
+  },
+  {
+    "date": 1710756099,
+    "product": "DBaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Release Update",
+    "details": [
+      "We're thrilled to share that we've completely redesigned the user interface (UI) of our DBaaS feature to offer you an improved user experience. Our team has dedicated significant effort to enhance both the visual appeal and functionality, making your interactions with the platform smoother and more enjoyable. "
+    ],
+    "to": "/docs/myaccount/database"
+  },
+  {
+    "date": 1709892099,
+    "product": "Load Balancer",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Load Balancer Release Update",
+    "details": [
+      "We are excited to announce the latest update to our Load Balancer (LB) feature, which introduces enhanced functionality. This release includes the addition of timeouts, such as WebSocket, client timeouts, server timeout, connection timeout as well as the HTTP keep alive timeout. "
+    ],
+    "to": "docs/myaccount/appliance/Application-Load-Balancer/#node"
+  },
+  {
+    "date": 1709805699,
+    "product": "Load Balancer",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Load Balancer Release Update",
+    "details": [
+      "We are excited to announce the latest update to our Load Balancer (LB) feature, This release includes the introduction of the Internal Load Balancer (LB) feature. "
+    ],
+    "to": "/docs/myaccount/appliance/Application-Load-Balancer/#details"
+  },
+  {
+    "date": 1707732099,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "2FA Release Update",
+    "details": [
+      "We are excited to announce that We've increased security for everyone. Now, all users need to use Two-Factor Authentication (2FA). Users have the flexibility to switch between 2FA options, either from TOTP (Time-Based One-Time Password) to Google Authenticator or from Google Authenticator to TOTP. "
+    ],
+    "to": "/docs/myaccount/security/2fa/"
+  },
+  {
+    "date": 1707127299,
+    "product": "General",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "IAM Release Update",
+    "details": [
+      "We are delighted to introduce Policy-Based Access Control (PBAC), seamlessly integrated into our MyAccount for an enhanced user experience. PBAC serves as a sophisticated user access management mechanism. It allows tailored permissions based on users' business responsibilities and predefined policies, with the option to create custom rules and policies. Unlike traditional organisation-wide role adjustments, PBAC offers quick adaptability to evolving requirements, ensuring swift and precise access privilege modifications. This dynamic approach reinforces asset protection through the enforcement of established rules and policies. PBAC stands out as a versatile authorisation solution, automating security controls within applications and data, catering to various access points with efficiency. "
+    ],
+    "to": "/docs/myaccount/GettingStarted/iam/"
+  },
+  {
+    "date": 1705053699,
+    "product": "FaaS",
+    "myaccount": true,
+    "tir": false,
+    "title": "FaaS (Function as a Service) new feature Release Update",
+    "details": [
+      "We are excited to announce the launch of Function as a Service (FaaS), a powerful new feature designed to transform how you develop and deploy functions or services on our serverless cloud platform. "
+    ],
+    "to": "/docs/myaccount/functions/faas"
+  },
+  {
+    "date": 1704880899,
+    "product": "Load Balancer",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "Load Balancer Release Update",
+    "details": [
+      "We are excited to announce that we have revamped the user interface (UI) of our Load Balancer platform to provide you with an even better user experience. Our team has worked diligently to enhance the visual appeal and functionality, ensuring that your interactions with the platform are more seamless and enjoyable. "
+    ],
+    "to": "/docs/myaccount/appliance/LoadBalancer/"
+  },
+  {
+    "date": 1710756099,
+    "product": "DBaaS",
+    "tag": [],
+    "myaccount": true,
+    "tir": false,
+    "title": "DBaaS Release Update",
+    "details": [
+      "We are thrilled to share that our latest update brings a significant enhancement to our Database as a Service (DBaaS) platform. Starting now, users can take advantage of Separate Monitoring Graphs for replicas, offering a more detailed and insightful view into the performance of your database replicas. "
+    ],
+    "to": "/docs/myaccount/database"
+  }
+]

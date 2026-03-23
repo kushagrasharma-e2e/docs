@@ -1,0 +1,43 @@
+---
+title: Documentation Hub
+description: Overview of the documentation structure across E2E Networks
+---
+
+import Link from "@docusaurus/Link";
+
+# Documentation Hub
+
+<div className="doc-hub">
+  <div className="doc-hub__hero">
+    <span className="doc-hub__eyebrow">Overview</span>
+    <h2>Use this page only when you want the full map across products.</h2>
+    <p>
+      The homepage is now the main entry point, but this hub still provides a
+      useful cross-product overview when you want to understand the whole
+      documentation structure before choosing a path.
+    </p>
+  </div>
+
+  <div className="doc-hub__grid">
+    <Link className="doc-hub__card" to="/docs/myaccount">
+      <h3>MyAccount</h3>
+      <p>Infrastructure, operations, workflows, troubleshooting, and reference.</p>
+      <span className="doc-hub__link">Open MyAccount</span>
+    </Link>
+    <Link className="doc-hub__card" to="/docs/tir">
+      <h3>TIR</h3>
+      <p>Training, inference, research, and curated product guidance.</p>
+      <span className="doc-hub__link">Open TIR</span>
+    </Link>
+    <Link className="doc-hub__card" to="/release-notes">
+      <h3>Release Notes</h3>
+      <p>Track launches, changes, and platform updates across MyAccount and TIR.</p>
+      <span className="doc-hub__link">Open release notes</span>
+    </Link>
+    <Link className="doc-hub__card" to="/docs/help">
+      <h3>Help</h3>
+      <p>Support-oriented guides and troubleshooting flows that sit outside product hubs.</p>
+      <span className="doc-hub__link">Open Help</span>
+    </Link>
+  </div>
+</div>

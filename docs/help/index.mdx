@@ -1,0 +1,43 @@
+---
+title: Help
+description: Help and support guides across the documentation site
+---
+
+import Link from "@docusaurus/Link";
+
+# Help
+
+<div className="doc-hub">
+  <div className="doc-hub__hero">
+    <span className="doc-hub__eyebrow">Support Hub</span>
+    <h2>Find support-oriented guides without overloading the primary product navigation.</h2>
+    <p>
+      Help is the home for support flows, migrations, and troubleshooting content
+      that users may need alongside MyAccount or TIR, but not as part of the
+      main product-first header.
+    </p>
+  </div>
+
+  <div className="doc-hub__grid">
+    <Link className="doc-hub__card" to="/docs/help/godaddy">
+      <h3>DNS Migration to E2E</h3>
+      <p>Understand what changes when you move DNS management from GoDaddy to E2E.</p>
+      <span className="doc-hub__link">Open migration overview</span>
+    </Link>
+    <Link className="doc-hub__card" to="/docs/help/godaddy/migrate">
+      <h3>Migrate from GoDaddy</h3>
+      <p>Use the step-by-step task guide when you are ready to perform the migration.</p>
+      <span className="doc-hub__link">Open migration guide</span>
+    </Link>
+    <Link className="doc-hub__card" to="/docs/help/godaddy/troubleshoot">
+      <h3>Troubleshoot DNS Migration</h3>
+      <p>Use the troubleshooting page when a record, cutover, or validation step fails.</p>
+      <span className="doc-hub__link">Open troubleshooting</span>
+    </Link>
+    <Link className="doc-hub__card" to="/release-notes">
+      <h3>Release Notes</h3>
+      <p>Keep product updates close when support issues may be tied to recent platform changes.</p>
+      <span className="doc-hub__link">Open release notes</span>
+    </Link>
+  </div>
+</div>

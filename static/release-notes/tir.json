@@ -1,0 +1,1137 @@
+[
+  {
+    "date": 1770959552,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Nemotron Models Now Available in Model Endpoints",
+    "details": [
+      "We are introducing three new models — nemotron-3-nano-30b-a3b, nemotron-nano-12b-v2-vl, and nemotron-speech-streaming-en-0.6b — to link: {'Model Endpoints' : '/docs/tir/Inference/ModelEndpoints/'}, expanding the range of AI capabilities for diverse production workloads. These models are now available for deployment, enabling text, vision-language, and streaming speech inference use cases."
+    ],
+    "tag": ["New"]
+  },
+  {
+    "date": 1770959552,
+    "product": "Network",
+    "myaccount": false,
+    "tir": true,
+    "title": "Attach VPC UI Revamp",
+    "details": [
+      "We have introduced a refreshed and improved UI for the link : {'Attach VPC' : '/docs/tir/VPC/'} feature in the link: {'Instance' : '/docs/tir/Nodes/GuideTIR/'} and link: {'Inference' : '/docs/tir/Inference/ModelEndpoints/'}"
+    ],
+    "tag": ["New"]
+  },
+  {
+    "date": 1770694820,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Public Images Support for Instance Creation",
+    "details": [
+      "We have added support for link:{'Public Images' : '/docs/tir/Nodes/GuideTIR/#instance-images'} during link:{'Instance creation' : '/docs/tir/Nodes/GuideTIR/'}. Along with TIR Pre-built, Base OS, and link:{'Custom Images' : '/docs/tir/Nodes/Node_Own_Container/'} (via Container Registry), you can now launch instances using a public image URL or image name from registries like Docker Hub. This enhancement provides greater flexibility to use community or vendor-maintained images without managing custom builds, enabling faster experimentation and simpler setup."
+    ],
+    "tag": ["New"]
+  },
+  {
+    "date": 1770639499,
+    "product": "Inference",
+    "myaccount": false,
+    "tir": true,
+    "title": "VPC Connect for Inference",
+    "details": [
+      "We have introduced VPC Connect for link: {'Inference' : '/docs/tir/Inference/ModelEndpoints/'}, enabling secure private connectivity between your inference endpoints and resources inside your MyAccount VPC. You can now attach a link: {'Reserved VPC IP' : '/docs/tir/VPC/'} to an inference endpoint and access it using a private IP from within the same VPC, eliminating the need for public exposure. This ensures enhanced security, predictable networking, and seamless private access for production inference workloads."
+    ],
+    "tag": ["New"]
+  },
+  {
+    "date": 1770027068,
+    "product": "Training Cluster",
+    "myaccount": false,
+    "tir": true,
+    "title": "Node Status Uptime Metric for Training and Private Clusters",
+    "details": [
+      "We have introduced the link: {'Node Status Uptime Metric' : '/docs/tir/TrainingCluster/training_cluster/#node-monitoring'} for link: {'Training Clusters' : '/docs/tir/TrainingCluster/training_cluster/'} and link: {'Private Clusters' : '/docs/tir/private_cluster/'} , providing real-time visibility into node health and uptime. You can now monitor cluster nodes using detailed metrics such as CPU usage, memory utilization, uptime percentage, and power consumption, enabling better performance monitoring and efficient resource management."
+    ],
+    "tag": ["New"]
+  },
+  {
+    "date": 1769150678,
+    "product": "Inference",
+    "myaccount": false,
+    "tir": true,
+    "title": "Custom Metrics for Inference Scaling",
+    "details": [
+      "Users can now define framework-specific link : {'Custom Metrics' : '/docs/tir/Inference/ModelEndpoints/#scaling-policy--custom-metrics'} for autoscaling link : {'inference endpoints' : '/docs/tir/Inference/ModelEndpoints/'}—such as vLLM's running request count. This enables more precise scaling by monitoring the internal state of your inference engine, allowing Large Language Models (LLM) deployments to scale based on actual compute pressure rather than request throughput alone."
+    ]
+  },
+  {
+    "date": 1768388631,
+    "product": "Network",
+    "myaccount": false,
+    "tir": true,
+    "title": "Security Group Rule Configuration at Creation",
+    "details": [
+      "Users can now add inbound and outbound rules during link : {'security group creation' : '/docs/tir/Security_Group/#creating-a-new-security-group'} . This enhancement simplifies the workflow by allowing traffic rules to be configured upfront, reducing the need for additional edits after the security group is created and improving overall setup efficiency."
+    ],
+    "to": "/docs/tir/Security_Group/"
+  },
+  {
+    "date": 1767764025,
+    "product": "Training Cluster",
+    "myaccount": false,
+    "tir": true,
+    "title": "Training Cluster UI Revamp",
+    "details": [
+      "We’ve introduced a refreshed Training Cluster UI to make cluster creation and updates more intuitive. The new design streamlines workflows, improves clarity across steps, and reduces friction during configuration and modifications."
+    ],
+    "to": "/docs/tir/TrainingCluster/training_cluster/"
+  },
+  {
+    "date": 1767764025,
+    "product": "Private Cluster",
+    "myaccount": false,
+    "tir": true,
+    "title": "Private Cluster UI Revamp in Services (Instances & Inference)",
+    "details": [
+      "We’ve enhanced the Private Cluster experience for both Inference and Instance creation. A dedicated Private Cluster tab is now visible, making cluster selection more discoverable, improving configuration visibility, and providing a more consistent and streamlined creation workflow."
+    ],
+    "to": ""
+  },
+  {
+    "date": 1767593724,
+    "product": "General",
+    "myaccount": false,
+    "tir": true,
+    "title": "New Theme for TIR",
+    "details": [
+      "We’ve introduced a refreshed black-and-white theme across E2E TIR, designed to deliver a cleaner and more modern experience. The updated interface improves readability, enhances contrast, and reduces visual clutter, making navigation simpler and more intuitive. You’ll notice a more streamlined look across key workflows, helping you stay focused on what matters most."
+    ],
+    "to": ""
+  },
+  {
+    "date": 1767097461,
+    "product": "Network",
+    "myaccount": false,
+    "tir": true,
+    "title": "Security Group - UDP Protocol Support",
+    "details": [
+      "Security Groups now support the UDP protocol for both inbound and outbound rules, enabling seamless configuration for UDP-based applications and services. This allows customers to securely configure and run UDP-based workloads that were previously restricted, improving compatibility with real-time and performance-sensitive applications while maintaining fine-grained network control. "
+    ],
+    "to": "/docs/tir/Security_Group/"
+  },
+  {
+    "date": 1766553298,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "Sarvam Translate, IndicF5 and Indic Parler-TTS ",
+    "details": [
+      "We are excited to announce that Sarvam Translate, IndicF5, and Indic Parler-TTS are now live. Build next-gen experiences using structure-preserving translation, zero-shot voice cloning, and style-controllable text-to-speech. "
+    ],
+    "to": "/docs/tir/FoundationStudio/GenAI_API/GenAPI/"
+  },
+  {
+    "date": 1766016000,
+    "product": "Training Cluster",
+    "myaccount": false,
+    "tir": true,
+    "title": "Reserved IP Support for Training Cluster's Deployments",
+    "details": [
+      "We have introduced Reserved IP functionality for Training Cluster Deployments, enabling you to attach or detach a Reserved IP directly to an existing deployment for stable and persistent connectivity. Additionally, the Floating IP assigned during deployment creation can now be converted into a Reserved IP, allowing you to retain and reuse the same IP address even after recreation. This enhancement gives you greater flexibility, consistency, and control over network access for your deployment workloads. "
+    ],
+    "to": "/docs/tir/TrainingCluster/deployments/#reserved-ip-management"
+  },
+  {
+    "date": 1765366103,
+    "product": "Reserve IP",
+    "myaccount": false,
+    "tir": true,
+    "title": "Reserve VPC IP",
+    "details": [
+      "We have introduced the Reserve VPC IP feature which allows you to reserve a private IP from an existing VPC created in MyAccount and use it with TIR Instances (Nodes). This feature enables secure and private communication between your resources and the selected VPC without using public IPs. You can attach or detach the reserved VPC IP directly from instance actions the Network & Security section or the Reserved IP page. The VPC IP remains dedicated to your VPC and can be deleted when it is no longer in use giving you full control over private IP management. This helps simplify VPC based networking and build more secure and predictable network architectures."
+    ],
+    "to": "/docs/tir/VPC/#attach-the-reserved-vpc-ip-to-a-resource",
+    "tag": []
+  },
+  {
+    "date": 1765756800,
+    "product": "Private Cluster",
+    "myaccount": false,
+    "tir": true,
+    "title": "Private Cluster Management",
+    "details": [
+      "RBAC has been introduced for Private Clusters, giving IAM Admins and Owners full control over cluster lifecycle and node management, while other users have scoped, team-based and project-based access. This ensures secure governance, clear visibility, and efficient multi-team collaboration with predictable cost and resource isolation."
+    ],
+    "to": "/docs/tir/private_cluster/",
+    "tag": []
+  },
+  {
+    "date": 1764192000,
+    "product": "Reserve IP",
+    "myaccount": false,
+    "tir": true,
+    "title": "Transfer Reserve IP",
+    "details": [
+      "We’re excited to introduce the ability to transfer Reserved IPs between projects, providing greater flexibility in resource management. "
+    ],
+    "to": "/docs/tir/Reserve_IP/",
+    "tag": ["New"]
+  },
+  {
+    "date": 1762321266,
+    "product": "Inference",
+    "myaccount": false,
+    "tir": true,
+    "title": "Inference UI Revamp",
+    "details": [
+      "We have revamped the Inference Model UI into a single-page creation flow. The new design consolidates all configuration options into a single unified interface, making the model setup process faster, simpler, and more seamless."
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": ["New"]
+  },
+  {
+    "date": 1760522010,
+    "product": "AI Labs",
+    "myaccount": false,
+    "tir": true,
+    "title": "AI Labs v2",
+    "details": [
+      "We’re excited to introduce new managerial roles and group management in AI Labs. This update allows admins to easily add users, manage courses, and share datasets among organization members. It also includes a new Free Up Resources feature, giving you smarter control and improved efficiency while managing AI Lab environments."
+    ],
+    "to": "/docs/tir/ai-labs/",
+    "tag": ["New"]
+  },
+  {
+    "date": 1760350133,
+    "product": "Network",
+    "myaccount": false,
+    "tir": true,
+    "title": "Security Groups",
+    "details": [
+      "You can now attach or detach Security Groups to Nodes and Inference to control inbound and outbound traffic. Security Groups can be updated or removed at any time, allowing for flexible network security management."
+    ],
+    "to": "/docs/tir/Security_Group/",
+    "tag": ["New"]
+  },
+  {
+    "date": 1759753339,
+    "product": "Inference",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Versioning in Model Endpoint",
+    "details": [
+      "Introducing Model Versioning for Inference Models! Take control like never before — you can now choose from multiple versions of each inference model, giving you greater flexibility, precision, and customization for your use cases."
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/#create-model-endpoints",
+    "tag": ["New"]
+  },
+  {
+    "date": 1759190400,
+    "product": "Node",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) UI Revamp",
+    "details": [
+      "Discover the redesigned Instances (Nodes) UI, featuring streamlined workflows and enhanced navigation for a seamless user experience. "
+    ],
+    "to": "/docs/tir/Nodes/",
+    "tag": ["New"]
+  },
+  {
+    "date": 1757573257,
+    "product": "AI Labs",
+    "myaccount": false,
+    "tir": true,
+    "title": "AI Labs Hourly Plans",
+    "details": [
+      "We’re beyond excited to roll out AI Labs Hourly Plans with a powerful new Start-Stop feature for courses. This update gives you greater flexibility, smarter control over your learning, and the ability to save costs while enjoying a seamless, on-demand AI Labs experience like never before. "
+    ],
+    "to": "/docs/tir/ai-labs/",
+    "tag": ["New"]
+  },
+  {
+    "date": 1756115556,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "Bulk Prompt Upload Support in GenAI ",
+    "details": [
+      "Introducing a new feature that enables bulk prompt uploads, parallel processing, and progress tracking through async history. Currently, this feature is supported only for text-to-text models."
+    ],
+    "to": "/docs/tir/FoundationStudio/GenAI_API/GenAPI/",
+    "tag": ["New"]
+  },
+  {
+    "date": 1755734400,
+    "product": "Storage",
+    "myaccount": false,
+    "tir": true,
+    "title": "Support for Encryption at Rest",
+    "details": [
+      "We’re excited to introduce encryption support, adding an extra layer of security to your data. You can now launch Instances(Nodes), Vector Databases, and Disks with built-in encryption at rest, ensuring your information stays protected."
+    ],
+    "to": "",
+    "tag": ["New"]
+  },
+  {
+    "date": 1755579292,
+    "product": "Storage",
+    "myaccount": false,
+    "tir": true,
+    "title": "SFS Size Upgrade Feature",
+    "details": [
+      "We’re excited to announce the launch of the SFS Size Upgrade feature! With this update, you can seamlessly expand the size of your Shared File System after creation, giving you the flexibility to scale storage as your needs evolve. No more limitations — grow your storage on demand and keep your workflows running smoothly with SFS!"
+    ],
+    "to": "/docs/tir/sfs/#resize-sfs",
+    "tag": ["New"]
+  },
+  {
+    "date": 1754482431,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "OpenAI / GPT OSS 120B",
+    "details": [
+      "Introducing the OpenAI GPT‑OSS 120B model – a 120 billion parameter, open source friendly version of GPT that delivers state of the art language understanding and generation while remaining fully accessible for community development and integration."
+    ],
+    "to": "",
+    "tag": ["New"]
+  },
+  {
+    "date": 1752735309,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Async Request | OpenAI Python SDK",
+    "details": [
+      "You can now send asynchronous requests using the OpenAI Python SDK. A new command option has been introduced that lets you easily initiate async requests to your model endpoints directly from Python. Whether you're using scripts or interactive shells, this simplifies async handling greatly."
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/#async-invocations",
+    "tag": []
+  },
+  {
+    "date": 1749797349,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) | FramePack",
+    "details": [
+      "We're thrilled to announce the launch of FramePack on Instances(Nodes)! Available as a TIR pre-built image, Framepack is a lightweight Python library that helps organize and manage DataFrames as named frames within a single object. It simplifies handling multiple datasets together, making data analysis more structured and efficient. Unleash your creativity with FramePack on TIR today!"
+    ],
+    "tag": []
+  },
+  {
+    "date": 1749118844,
+    "product": "Storage",
+    "myaccount": false,
+    "tir": true,
+    "title": "Parallel File System (PFS)",
+    "details": [
+      "We're thrilled to announce the launch of Parallel File System (PFS) on TIR! Parallel File System empowers high-performance computing with fast, scalable, and reliable data access. The support for parallel data access makes it ideal for workloads involving massive datasets, demanding extreme throughput and concurrency. Accelerate your compute-intensive tasks with the blazing speed of Parallel File System on TIR today!"
+    ],
+    "to": "/docs/tir/pfs/",
+    "tag": []
+  },
+  {
+    "date": 1749020545,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) | ComfyUI",
+    "details": [
+      "We're thrilled to announce the launch of ComfyUI on Instances(Nodes)! Available as a TIR pre-built image, ComfyUI provides a powerful, node-based interface for visual AI workflows—making it easier than ever to experiment with generative AI models. Unleash your creativity with ComfyUI on TIR today!"
+    ],
+    "to": "/docs/tir/Nodes/",
+    "tag": []
+  },
+  {
+    "date": 1747958400,
+    "product": "AI Labs",
+    "myaccount": false,
+    "tir": true,
+    "title": "AI Labs",
+    "details": [
+      "We’re thrilled to announce the release of AI Labs, a purpose-built platform for end customers to foster structured learning, research innovation, and efficient resource management. Designed for professors, researchers, and students. AI Labs transforms traditional labs into dynamic, cloud-powered AI environments. "
+    ],
+    "to": "/docs/tir/ai-labs/",
+    "tag": []
+  },
+  {
+    "date": 1746614403,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "DeepSeek",
+    "details": [
+      "Added support for DeepSeek-Coder-V2-Lite-Instruct-FP8, a lightweight FP8-optimized model designed for efficient code understanding and generation. ",
+      "We’re thrilled to announce DeepSeek-R1-Distill-Llama-70B, trained with RL and excelling in reasoning. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": []
+  },
+  {
+    "date": 1746536400,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Geema, Hermes and BAAI BGE",
+    "details": [
+      "Say hello to Gemma 3 27B IT, developed using Gemini tech for agile, high-quality performance. ",
+      "Introducing BGE Multilingual Gemma2, supporting a wide range of multilingual tasks with strong generalization. ",
+      "Unveiling Hermes 3 Llama 3.1 405B, fine-tuned by Nous Research for top-tier performance. ",
+      "Introducing BAAI BGE EN ICL, an in-context learning powerhouse that leads on BEIR and AIR-Bench, designed for next-gen embedding tasks. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": []
+  },
+  {
+    "date": 1746450000,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Dolphin, Mistral, OLMo, Phi and QVQ  ",
+    "details": [
+      "Dolphin 2.9.2 Mixtral 8x22b runs on SystemChat 2.0 to support consistent long-term prompts. ",
+      "Now available: Mistral Nemo Instruct 2407, designed to elevate instruction-following and comprehension tasks. ",
+      "OLMo 7B Instruct advances open science with transparency and reproducibility using the Dolma dataset. ",
+      "Phi 3.5 Mini Instruct delivers dense reasoning in a compact format using curated synthetic data. ",
+      "Phi-3-mini-4k-instruct is a 3.8B parameter open model combining synthetic and filtered web data. ",
+      "Introducing Phi 3.5 MoE Instruct, built on a mixture-of-experts architecture for smarter decisions. ",
+      "Meet QVQ 72B Preview — an experimental model pushing reasoning with deep architecture changes. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": []
+  },
+  {
+    "date": 1746363600,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "QwQ",
+    "details": [
+      "Announcing QwQ 32B — optimized for complex inference and problem-solving in the Qwen lineup. ",
+      "QwQ-32B-Preview is an experimental research model developed by the Qwen Team, focused on advancing AI reasoning capabilities. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": []
+  },
+  {
+    "date": 1746277200,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Qwen ",
+    "details": [
+      "Introducing Qwen2.5-32B-Instruct, enhancing coding and mathematics with domain-specific training. ",
+      "Qwen 2.5 72B Instruct boosts math and programming intelligence via expert domain training. ",
+      "Qwen 2.5 Coder 7B delivers high-performance code generation as part of the CodeQwen family. ",
+      "Introducing Qwen 2 VL 72B Instruct for high-resolution, fine-grained vision-language tasks. ",
+      "Say hello to Qwen2-VL-7B-Instruct, a multimodal AI from Alibaba Cloud for vision and language tasks. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": []
+  },
+  {
+    "date": 1746190800,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Llava ",
+    "details": [
+      "Llava 1.5 13B HF enhances language understanding through advanced autoregressive modeling. ",
+      "Meet Llava 1.5 7B HF — a faster, cost-efficient variant optimized for transformer-based language modeling. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": []
+  },
+  {
+    "date": 1746104400,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Llama ",
+    "details": [
+      "Announcing Llama 3.1 405B Instruct, optimized for dynamic dialogue and outperforming open-source benchmarks. ",
+      "Explore Llama 3 OpenBioLLM 70B, designed for biomedical research and healthcare domains. ",
+      "The Llama 3.1 Nemotron Ultra 253B v1 excels in reasoning and dialogue, especially for coding. ",
+      "Llama 3.2 1B Instruct is built for retrieval and multilingual conversation in compact, high-impact scenarios. ",
+      "Llama 3.1 70B Instruct delivers best-in-class dialogue capabilities refined for natural language interaction. ",
+      "Llama 3 OpenBioLLM 8B offers domain-specific understanding for advanced bioscience tasks. ",
+      "Meet Llama3-Med42-8B, a clinical LLM suite by M42 for accessible medical expertise. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": []
+  },
+  {
+    "date": 1744288046,
+    "product": "Reserve IP",
+    "myaccount": false,
+    "tir": true,
+    "title": "Reserve IP",
+    "details": [
+      "Introducing Reserve IP — a new feature on E2E Cloud that lets you reserve static IP addresses independently of any node. These IPs can be attached to and detached from nodes as needed, giving you more flexibility and control over your cloud infrastructure. "
+    ],
+    "to": "/docs/tir/Reserve_IP/",
+    "tag": []
+  },
+  {
+    "date": 1743591755,
+    "product": "Terraform",
+    "myaccount": false,
+    "tir": true,
+    "title": "TIR Terraform Provider",
+    "details": [
+      "We're excited to announce the latest release of the E2E TIR Terraform provider, supporting a wide range of E2E Cloud services! Use the TIR provider to easily interact with and manage E2E resources via Terraform. "
+    ],
+    "to": "/docs/tir/terraform/",
+    "tag": []
+  },
+  {
+    "date": 1741872132,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoint - SGlang Framework",
+    "details": [
+      "We're thrilled to introduce the SGlang Framework in Model Endpoint! SGlang is a high-speed serving framework designed for large language models and vision-language models. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/",
+    "tag": []
+  },
+  {
+    "date": 1739968648,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "Vision Fine-Tune Models",
+    "details": [
+      "Added support for vision-11b and vision-11b-instruct fine-tuned models for enhanced visual understanding and instruction-based tasks. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/guides/llama-3-2-11b-vision/",
+    "tag": []
+  },
+  {
+    "date": 1739855122,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Async Inference",
+    "details": [
+      "We are excited to announce that we have introduced Async Invocation in Model Endpoint. This feature allows inference tasks to be processed asynchronously, ensuring seamless operation.  "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints/#async-invocations",
+    "tag": []
+  },
+  {
+    "date": 1738307593,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "DeepSeek R1",
+    "details": [
+      " Introducing DeepSeek-R1 – an advanced reasoning model excelling in math, coding, and logic tasks with remarkable performance. "
+    ],
+    "to": "/docs/tir/FoundationStudio/GenAI_API/GenAPI",
+    "tag": []
+  },
+  {
+    "date": 1738307593,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "DeepSeek V3",
+    "details": [
+      "Introducing DeepSeek-V3 - a powerful 671B MoE language model designed for efficient inference, stable training, and exceptional performance across diverse NLP tasks. "
+    ],
+    "to": "/docs/tir/FoundationStudio/GenAI_API/GenAPI",
+    "tag": []
+  },
+  {
+    "date": 1738066826,
+    "product": "Model Evaluation",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Evaluation",
+    "details": [
+      "We are excited to introduce Model Evaluation! This feature enables the assessment of a machine learning model's performance to ensure it aligns with the required objectives. Model evaluation helps verify whether the model generalizes effectively to unseen data and meets the intended business or technical goals. "
+    ],
+    "to": "/docs/tir/FoundationStudio/ModelEvaluation/model_evaluation/",
+    "tag": []
+  },
+  {
+    "date": 1737691543,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Convert to Committed Option on Instances(Nodes)",
+    "details": [
+      "We are excited to announce the launch of the \"Convert to Committed\" feature for Instances(Nodes) that support the committed option. This feature ensures that an instance can be converted to a committed state without the need to stop or restart the instance, providing a seamless experience. "
+    ],
+    "to": "/docs/tir/Nodes/GuideTIR/#convert-to-committed",
+    "tag": []
+  },
+  {
+    "date": 1737962990,
+    "product": "Spot Instances",
+    "myaccount": false,
+    "tir": true,
+    "title": "Spot Instances",
+    "details": [
+      "We're thrilled to announce the launch of Spot Instances—your gateway to unbeatable savings on cloud computing! With Spot Instances, you can tap into  cloud capacity at a fraction of the cost of on-demand pricing. This makes them perfect for flexible, fault-tolerant workloads, helping you maximize efficiency while drastically cutting expenses. Embrace smarter cloud usage and start saving big today! "
+    ],
+    "to": "/docs/tir/Nodes/spot_instance",
+    "tag": []
+  },
+  {
+    "date": 1737464821,
+    "product": "Training Cluster",
+    "myaccount": false,
+    "tir": true,
+    "title": "Training Cluster",
+    "details": [
+      "We are excited to introduce the Training Cluster, a dedicated environment designed for efficient resource allocation and management. "
+    ],
+    "to": "/docs/tir/TrainingCluster/training_cluster/#create-training-cluster",
+    "tag": []
+  },
+  {
+    "date": 1737026046,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Update Image",
+    "details": [
+      "We are excited to announce the introduction of the Update Image feature in Instances(Nodes). This enhancement enables users to effortlessly update image within any instance. "
+    ],
+    "to": "/docs/tir/Nodes/GuideTIR#update-image",
+    "tag": []
+  },
+  {
+    "date": 1738152112,
+    "product": "RAG",
+    "myaccount": false,
+    "tir": true,
+    "title": "Custom Model Endpoint in RAG",
+    "details": [
+      "We are excited to announce   that users can now leverage Custom Model Endpoints to create a tailored Knowledge Base and power a personalized Chat Assistant. This update offers greater flexibility and control for enhanced interactions. "
+    ],
+    "to": "/docs/tir/RAG/knowledge_base#create-a-new-knowledge-base",
+    "tag": []
+  },
+  {
+    "date": 1735300800,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Start Script",
+    "details": [
+      "We are pleased to announce the introduction of the Start Script feature for Instances(Nodes). This enhancement enables users to seamlessly attach scripts to any Instances(Nodes), offering increased flexibility and control over Instances(Nodes) management. "
+    ],
+    "to": "/docs/tir/Nodes/GuideTIR#start-script",
+    "tag": []
+  },
+  {
+    "date": 1734566400,
+    "product": "General",
+    "myaccount": false,
+    "tir": true,
+    "title": "Billing and Usage",
+    "details": [
+      "Introducing Billing and Usage section in TIR which offers various options, including making payments, applying coupons for infra credits and discounts, viewing account statements and invoices, and analyzing usage across different teams and projects for your services. "
+    ],
+    "to": "/docs/tir/Billing_and_Usage",
+    "tag": []
+  },
+  {
+    "date": 1733923311,
+    "product": "General",
+    "myaccount": false,
+    "tir": true,
+    "title": "Usage Analysis",
+    "details": [
+      "Introducing Usage Analysis—a powerful new feature that puts you in control of your resource usage! Track and explore resource consumption like never before with filters for teams, projects, resources, and time periods. Gain actionable insights to optimize utilization and maximize efficiency effortlessly. Take the guesswork out of resource management and empower your decisions with precision! "
+    ],
+    "to": "/docs/tir/Billing_and_Usage/usage_analysis",
+    "tag": []
+  },
+  {
+    "date": 1731481564,
+    "product": "RAG",
+    "myaccount": false,
+    "tir": true,
+    "title": "Retrieval-Augmented Generation",
+    "details": [
+      "Introducing Retrieval-Augmented Generation (RAG), a powerful feature that elevates large language model (LLM) performance by enabling access to a dedicated knowledge base. This allows for more precise and relevant responses tailored to specific information. With RAG, LLMs can go beyond general training data, drawing directly from curated resources for enhanced accuracy and context. "
+    ],
+    "to": "/docs/tir/RAG/",
+    "tag": []
+  },
+  {
+    "date": 1731308764,
+    "product": "General",
+    "myaccount": false,
+    "tir": true,
+    "title": "Private Cluster",
+    "details": [
+      "Introducing the Private Cluster, a feature that lets you create a dedicated environment with predefined allocations of RAM, CPU, and GPU resources. "
+    ],
+    "to": "/docs/tir/private_cluster/",
+    "tag": []
+  },
+  {
+    "date": 1729044000,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoint (Serverless Configuration)",
+    "details": [
+      "We are excited to announce the launch of Scaling the Active Worker to 0 for Inference. With this feature, you can set the Active Worker count to 0, ensuring that when no requests are made to the inference, no charges will be incurred. This enhancement helps optimize costs by automatically minimizing resource usage during idle periods. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1728995400,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "GenAI API (Llama 3.2 11B Vision Instruct)",
+    "details": [
+      "We are thrilled to announce that we have launched **Llama 3.2 11B Vision Instruct** model in GenAI API process. When setting up GenAI API, you have the option to select the **Llama 3.2 11B Vision Instruct** model. Llama 3.2 Vision Instruct is designed for commercial and research use, with instruction-tuned models for visual recognition, image reasoning, and captioning, and pretrained models adaptable to various image-based tasks. "
+    ],
+    "to": "/docs/tir/FoundationStudio/GenAI_API/GenAPI",
+    "tag": []
+  },
+  {
+    "date": 1727928000,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoints (BAAI/bge-large-en-v1.5 model)",
+    "details": [
+      "We are excited to announce the introduction of the new BAAI/bge-large-en-v1.5 model in Model Endpoints. When setting up Model Endpoints, you now have the option to select the BAAI/bge-large-en-v1.5 model. This general-purpose embedding model, developed by BAAI, generates 1024-dimensional embeddings for input text. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1727758800,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) Revamp",
+    "details": [
+      "We are excited to announce the revamp of our Instances(Nodes) creation process. The revamped Instances(Nodes) creation process is designed to simplify workflows and improve user efficiency. "
+    ],
+    "to": "/docs/myaccount/node",
+    "tag": []
+  },
+  {
+    "date": 1727748000,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoints (BAAI/bge-reranker-large model)",
+    "details": [
+      "We are excited to announce the introduction of the new BAAI/bge-reranker-large model in Model Endpoints. When setting up Model Endpoints, you now have the option to select the BAAI/bge-reranker-large model. This cross-encoder model, developed by BAAI, is used to re-rank passages or texts relevant to a query by computing a relevance score. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1727665200,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoints (Pixtral 12B model)",
+    "details": [
+      "We are excited to announce the introduction of the new Pixtral 12B model in Model Endpoints. When setting up Model Endpoints, you now have the option to select the Pixtral 12B model. As Mistral AI's first multimodal model, it processes both text and images, making it ideal for advanced tasks such as image captioning and text generation. Its integration of visual and textual data provides powerful AI capabilities for a wide range of applications. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1727582400,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoints (Llama 3.2 3B Instruct model)",
+    "details": [
+      "We are excited to announce the introduction of the new Llama 3.2 3B Instruct model in Model Endpoints. When setting up Model Endpoints, you now have the option to select the Llama 3.2 3B Instruct model. This low-latency model is designed for tasks such as text summarization, classification, and translation, making it ideal for fast and accurate language processing in mobile writing assistants and customer service applications. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1727406900,
+    "product": "SDK",
+    "myaccount": false,
+    "tir": true,
+    "title": "SDK (Integrations)",
+    "details": [
+      "We are excited to announce the release of our SDK for Integrations. This tool enables users to easily create and manage integrations, improving functionality and simplifying the integration process. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1727406900,
+    "product": "SDK",
+    "myaccount": false,
+    "tir": true,
+    "title": "SDK (Dataset)",
+    "details": [
+      "We are excited to announce the launch of our SDK for Datasets. It will help users organize and manage their datasets effectively. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1726469400,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoints (Revamp)",
+    "details": [
+      "We are excited to introduce the newly revamped Model Endpoint creation process, designed to make it easier and more user-friendly. The updated interface focuses on simplicity, ensuring that creating and managing Model Endpoints is more intuitive and accessible for everyone. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1726056900,
+    "product": "Vector Database",
+    "myaccount": false,
+    "tir": true,
+    "title": "Vector Database (Stop Button)",
+    "details": [
+      "We are pleased to announce the stop feature for the vector database, which stops the operations of Vector Database quickly. This feature ensures a smooth and controlled shutdown, enhancing your management capabilities. "
+    ],
+    "to": "/docs/tir/VectorDatabase/Qdrant",
+    "tag": []
+  },
+  {
+    "date": 1726056900,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune (SDK)",
+    "details": [
+      "We are excited to introduce the FineTune SDK, making model fine-tuning easier and faster. With simple integration and customizable options, it allows users to train and deploy models effortlessly. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1725539400,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) (Custom Port)",
+    "details": [
+      "We are thrilled to announce that We have added a new feature to the Instances(Nodes) that allows users to set their own custom port, enabling them to run services on their preferred IP and port. "
+    ],
+    "to": "/docs/myaccount/node",
+    "tag": []
+  },
+  {
+    "date": 1725453000,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune Job (Revamp)",
+    "details": [
+      "We are thrilled to announce that the Fine-Tune Job creation process has been revamped, making it significantly easier for customers to use. The new user interface is designed with simplicity in mind, ensuring that the Fine-Tune Job creation is now more intuitive and easier for everyone. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1724227200,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "GenAI API (AI4Bharat Indic Trans 2)",
+    "details": [
+      "We are excited to announce that we have introduced the new **AI4Bharat Indic-ASR (Hindi)** model in GenAI API process.When you set up GenAI API, you have the option to select the AI4Bharat Indic-ASR (Hindi) model. It is is an Automatic Speech Recognition (ASR) system developed specifically for recognizing and transcribing Hindi speech. Part of the broader AI4Bharat initiative, this project is aimed at building AI tools and resources for Indian languages. Indic-ASR leverages deep learning models to convert spoken Hindi into text, making it useful for various applications, including voice assistants, transcription services, and accessibility tools. "
+    ],
+    "to": "/docs/tir/FoundationStudio/GenAI_API/GenAPI",
+    "tag": []
+  },
+  {
+    "date": 1724137855,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "(AI4Bharat Indic-ASR (Hindi))",
+    "details": [
+      "We are excited to announce that we have introduced the new **AI4Bharat Indic-ASR (Hindi)** model in GenAI API process.When you set up GenAI API, you have the option to select the AI4Bharat Indic-ASR (Hindi) model. It is is an Automatic Speech Recognition (ASR) system developed specifically for recognizing and transcribing Hindi speech. Part of the broader AI4Bharat initiative, this project is aimed at building AI tools and resources for Indian languages. Indic-ASR leverages deep learning models to convert spoken Hindi into text, making it useful for various applications, including voice assistants, transcription services, and accessibility tools. "
+    ],
+    "to": "/docs/tir/FoundationStudio/GenAI_API/GenAPI",
+    "tag": []
+  },
+  {
+    "date": 1723619455,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoint(enhancement)",
+    "details": [
+      "We are pleased to inform you that the Model Endpoint section has been enhanced to include a committed plan option for Endpoint creation. Previously, only an hourly plan was available, which limited flexibility for our users. With this new addition, users now have the opportunity to choose from a broader range of plans that better align with their specific requirements and long-term goals. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1722841855,
+    "product": "Data Syncer",
+    "myaccount": false,
+    "tir": true,
+    "title": "Data Syncer",
+    "details": [
+      "We are excited to announce the launch of our new feature, Data Syncer. This feature enables data synchronization from one bucket to another by establishing a connection and initiating the sync process. "
+    ],
+    "to": "/docs/tir/DataSyncer/",
+    "tag": []
+  },
+  {
+    "date": 1721977855,
+    "product": "User and Access Management",
+    "myaccount": false,
+    "tir": true,
+    "title": "User and Access management",
+    "details": [
+      "We are delighted to introduce User and Access Management, seamlessly integrated into our TIR AI Platform for an enhanced user experience. User and Access Management is a comprehensive system designed to manage user roles and permissions within the TIR platform. This feature ensures that the right people have access to the right resources, streamlining collaboration and enhancing security across various teams and projects. With User and Access Management, organizations can efficiently assign roles such as Owner, Admin, Team Lead, Team Member, Project Lead, and Member, ensuring clear and controlled access to critical functions and information. This structured approach not only simplifies user management but also fosters a more organized and productive working environment. "
+    ],
+    "to": "/docs/tir/DataSyncer/",
+    "tag": []
+  },
+  {
+    "date": 1720768255,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) and Inference(Advance Filter)",
+    "details": [
+      "We are thrilled to announce the addition of an advanced filter feature on the Instances(Nodes) and Model Endpoint Listing page. This enhancement enables users to perform comprehensive filtering based on multiple criteria and combinations. "
+    ],
+    "to": "/docs/myaccount/node",
+    "tag": []
+  },
+  {
+    "date": 1720768255,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune Job model",
+    "details": [
+      "We are thrilled to announce the addition of a new model to our Fine-Tuning Jobs: *stabilityai/stable-diffusion-xl-base-1.0*. This model is now available for fine-tuning, enhancing the versatility and capabilities of your machine learning projects. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1727758800,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) Restart",
+    "details": [
+      "We are excited to announce that we have introduced a restart Options in the Instances(Nodes). Users can now restart their notebooks. "
+    ],
+    "to": "/docs/myaccount/node",
+    "tag": []
+  },
+  {
+    "date": 1719558655,
+    "product": "Vector Database",
+    "myaccount": false,
+    "tir": true,
+    "title": "Vector Database (Snapshot feature)",
+    "details": [
+      "We are thrilled to announce the addition of Snapshot Capability in our vector databases enabling users to capture and store the current database state for backup. Users can easily revert to a previous database state using the stored snapshots, facilitating quick recovery from data loss or testing scenarios. "
+    ],
+    "to": "/docs/tir/VectorDatabase/Qdrant",
+    "tag": []
+  },
+  {
+    "date": 1719558655,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) (Add multiple SSH)",
+    "details": [
+      "We are excited to announce the release of a new improved feature in Instances(Nodes), where users can now add multiple SSH keys at any status of the instance. "
+    ],
+    "to": "/docs/myaccount/node",
+    "tag": []
+  },
+  {
+    "date": 1718867455,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoint (Restart Inference)",
+    "details": [
+      "We are excited to announce the latest addition of **Restart Action** to the model endpoint actions, and using this the user will be able to restart the endpoint. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1718867455,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune Job model",
+    "details": [
+      "We are excited to announce that users can now create fine-tuned models by continuing training from previous model checkpoints, with only fine-tuned repositories available. Also the user is able to clone the previous fine tuned job to create a new fine tuned job. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1718349055,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoint(update specification)",
+    "details": [
+      "We are excited to announce the release of new feature in model endpoint where user can update the specification of the repositories and endpoints. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1718349055,
+    "product": "SSH Keys",
+    "myaccount": false,
+    "tir": true,
+    "title": "SSH Keys (Sync SSH Keys)",
+    "details": [
+      "We are thrilled to announce the launch of a new feature that allows users to import SSH keys from MyAccount to TIR AI platform. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1718262655,
+    "product": "Instances(Nodes)",
+    "myaccount": false,
+    "tir": true,
+    "title": "Instances(Nodes) (Instances(Nodes) Launch Options)",
+    "details": [
+      "We are thrilled to announce the launch of a new feature that allows users to launch Instances(Nodes) without JupyterLab. Additionally, for container registry, users can now specify whether the image includes JupyterLab or not. This enhancement provides greater flexibility and customization for your instance environments. "
+    ],
+    "to": "/docs/myaccount/node",
+    "tag": []
+  },
+  {
+    "date": 1717744255,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune (Training Metrics Feature)",
+    "details": [
+      "We are excited to announce the launch of a new feature: training metrics in Fine-Tuning Jobs. This feature includes the following metrics "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1717657855,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune (New Model Additions)",
+    "details": [
+      "We are thrilled to announce the addition of three new models to our Fine-Tuning Jobs: *mistralai/Mistral-7B-Instruct-v0.2*, *meta-llama/Meta-Llama-3-8B-Instruct*, and *google/gemma-7b-it*. These models are now available for fine-tuning, enhancing the versatility and capabilities of your machine learning projects. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1717571455,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoint (HF Token Integration)",
+    "details": [
+      "We are pleased to announce the addition of the HF Token Integration Section in the Model Endpoint creation and updating processes. This enhancement allows users to avoid repeatedly providing an HF Token during model creation. Additionally, it supports the storage of multiple integration tokens simultaneously, streamlining and improving the user experience. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1716793855,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune  (Added LORA and bnb quantization option)",
+    "details": [
+      "We are thrilled to unveil our latest update, integrating LORA configuration and Bits and Bytes (BnB) quantization options for fine-tuning models. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1716275455,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune  (Wandb Integration)",
+    "details": [
+      "We are excited to announce that we have integrated Wandb for model fine-tuning. Wandb, short for Weights and Biases, is a platform that offers tools for machine learning experiment tracking, visualization, and collaboration. It helps you keep track of your machine learning experiments, log hyperparameters, metrics, and output visualizations, making it easier to monitor and share your work with others. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1715929855,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune  (Feature update and UI chnages)",
+    "details": [
+      "We are excited to announce the addition of new features to our fine-tuning, including logs, events, and utilization metrics. We have also made updates to the fine-tuning model's GUI for an enhanced user experience. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  },
+  {
+    "date": 1714720255,
+    "product": "Model Endpoints",
+    "myaccount": false,
+    "tir": true,
+    "title": "Model Endpoint (vLLM model)",
+    "details": [
+      "We are excited to announce that we have introduced the new vLLM model in Model Endpoints.When you set up Model Endpoints , you have the option to select the vLLM model.The vLLM server is structured to accommodate the OpenAI Chat API, enabling users to partake in dynamic conversations with the model. This chat interface provides a highly interactive method of interaction, facilitating fluid exchanges that can be archived in the chat history. "
+    ],
+    "to": "/docs/tir/Inference/ModelEndpoints",
+    "tag": []
+  },
+  {
+    "date": 1714374174,
+    "product": "GenAI API",
+    "myaccount": false,
+    "tir": true,
+    "title": "(llama-3-8b-instruct model)",
+    "details": [
+      "We are excited to announce that we have introduced the new llama-3-8b-instruct model in GenAI API process.When you set up GenAI API, you have the option to select the llama-3-8b-instruct model.This model is an advanced version of 'Llama-2-13b-chat' model.It is a user-friendly platform designed for easy access, allowing you to select an AI model, adjust settings, and observe real-time results. It's perfect for individuals interested in exploring machine learning and AI models. "
+    ],
+    "to": "/docs/tir/FoundationStudio/GenAI_API/GenAPI",
+    "tag": []
+  },
+  {
+    "date": 1713510174,
+    "product": "FineTune",
+    "myaccount": false,
+    "tir": true,
+    "title": "FineTune  (meta-llama/Meta-Llama-3-8B model)",
+    "details": [
+      "We are excited to announce that we have introduced the new 'meta-llama/Meta-Llama-3-8B' model in fine-tuning process.When you set up fine-tuning, you have the option to select the 'meta-llama/Meta-Llama-3-8B' model in the job model configuration. "
+    ],
+    "to": "/docs/tir/FoundationStudio/FineTuneModels/fine_tuning_docs",
+    "tag": []
+  }
+]
