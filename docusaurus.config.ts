@@ -40,7 +40,7 @@ const config: Config = {
   },
 
   url: "https://kushagrasharma-e2e.github.io/",
-  baseUrl: "/e2e-docs/",
+  baseUrl: "/docs/",
 
   organizationName: "E2E-Networks",
   projectName: "docs",
