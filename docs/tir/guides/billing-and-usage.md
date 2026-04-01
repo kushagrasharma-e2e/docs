@@ -18,3 +18,5 @@ Keep billing and usage close to your workflow when cost, quotas, or utilization 
 - [Official TIR billing and usage guide](https://docs.e2enetworks.com/docs/tir/Billing_and_Usage/usage_analysis/)
 - [Training workflows](../workflows/training.md)
 - [Inference workflows](../workflows/inference.md)
+
+Use the live billing guide when you need the deeper product detail. Use this local page when you need the right route and nearby workflow context first.

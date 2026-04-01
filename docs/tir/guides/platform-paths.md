@@ -5,7 +5,7 @@ description: Map common TIR jobs to the right documentation path
 
 # Platform Paths
 
-Use this page when you know the task, but not yet the right documentation path.
+Use this page when you know the task, but not yet the right documentation path inside the curated TIR section.
 
 ## Choose a path by intent
 
@@ -20,4 +20,4 @@ Use this page when you know the task, but not yet the right documentation path.
 
 ## Live product documentation
 
-Use the [official TIR documentation home](https://docs.e2enetworks.com/docs/tir/) when you need the most current product detail beyond the routing help in this site.
+Use the [official TIR documentation home](https://docs.e2enetworks.com/docs/tir/) when you need deeper or broader product detail beyond the curated local routing help in this repo.

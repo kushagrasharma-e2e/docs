@@ -11,18 +11,21 @@ import Link from "@docusaurus/Link";
 <div className="doc-hub">
   <div className="doc-hub__hero doc-hub__hero--plain">
     <span className="doc-hub__eyebrow">Documentation</span>
-    <h2>TIR documentation built around the workflow you need.</h2>
-    <p className="doc-hub__lede">
-      TIR is organized around training, inference, and research. This section
-      acts as the TIR landing layer inside this docs site, with curated paths,
-      quick links, and a visible sidebar so the structure is clear immediately.
-    </p>
+    <h2>Use this hub as the fastest curated front door into TIR.</h2>
+    <p className="doc-hub__lede">This section is intentionally curated. Start here for quick orientation, workflow routing, billing context, and support-aware paths, then continue into the extended live TIR docs when you need broader product detail.</p>
+    <div className="doc-hub__tag-row">
+      <span className="doc-hub__tag">Curated</span>
+      <span className="doc-hub__tag">Training</span>
+      <span className="doc-hub__tag">Inference</span>
+      <span className="doc-hub__tag">Research</span>
+      <span className="doc-hub__tag">Extended TIR Docs</span>
+    </div>
   </div>
 
   <div className="doc-hub__actions">
     <Link className="doc-hub__action" to="/docs/tir/getting-started/quickstart">
       <h3>Quickstart</h3>
-      <p>Use the shortest path into TIR docs when you want to orient quickly and keep moving.</p>
+      <p>Use the shortest local path into TIR when you want to orient quickly and keep moving.</p>
       <span className="doc-hub__link">Open quickstart</span>
     </Link>
     <Link className="doc-hub__action" to="/docs/tir/workflows/training">
@@ -42,96 +45,92 @@ import Link from "@docusaurus/Link";
     </Link>
   </div>
 
-  <div className="doc-hub__section">
-    <div className="doc-hub__section-header">
-      <h2>Explore TIR</h2>
-      <p>Use the section that matches the kind of work you are doing instead of starting from a generic intro page.</p>
-    </div>
-    <div className="doc-hub__grid doc-hub__grid--compact">
-      <Link className="doc-hub__card" to="/docs/tir/getting-started/overview">
-        <h3>Getting Started</h3>
-        <p>Orient yourself quickly and move into the right TIR workflow without extra clicks.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
+    <div className="doc-hub__section">
+      <div className="doc-hub__section-header">
+        <h2>Choose the level of depth you need</h2>
+        <p>Stay local for routing and common jobs, then step into the live manual only when the curated path intentionally stops.</p>
+      </div>
+      <div className="doc-hub__grid doc-hub__grid--compact">
+        <Link className="doc-hub__card" to="/docs/tir/getting-started/overview">
+          <h3>Curated local docs</h3>
+          <p>Use the local docs for orientation, workflow routing, billing context, and support-aware pathfinding.</p>
+          <span className="doc-hub__link">Stay in this repo</span>
+        </Link>
       <Link className="doc-hub__card" to="/docs/tir/workflows/training">
         <h3>Training</h3>
-        <p>Use the training path when model-building and iterative runs are the main job.</p>
-        <span className="doc-hub__link">Open section</span>
+        <p>Use the training route when model development, job execution, or repeated experimentation is the main task.</p>
+        <span className="doc-hub__link">Follow the training path</span>
       </Link>
       <Link className="doc-hub__card" to="/docs/tir/workflows/inference">
         <h3>Inference</h3>
-        <p>Use the inference path for serving, deployment, and endpoint-oriented work.</p>
-        <span className="doc-hub__link">Open section</span>
+        <p>Use the inference route when serving, endpoint management, or deployment behavior is the primary concern.</p>
+        <span className="doc-hub__link">Follow the inference path</span>
       </Link>
       <Link className="doc-hub__card" to="/docs/tir/workflows/research">
         <h3>Research</h3>
-        <p>Use the research path when exploration and experimentation are the main goal.</p>
-        <span className="doc-hub__link">Open section</span>
+        <p>Use the research route when experimentation speed, environment iteration, and exploration loops matter most.</p>
+        <span className="doc-hub__link">Follow the research path</span>
       </Link>
-      <Link className="doc-hub__card" to="/docs/tir/guides/platform-paths">
-        <h3>Guides</h3>
-        <p>Map common TIR jobs to the right documentation path and keep billing context nearby.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
-      <Link className="doc-hub__card" to="/docs/tir/reference/platform-reference">
-        <h3>Reference</h3>
-        <p>Use the concise reference map when you need the section structure at a glance.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
-    </div>
+        <Link className="doc-hub__card" href="https://docs.e2enetworks.com/docs/tir/">
+          <h3>Extended TIR docs</h3>
+          <p>Move into the broader live TIR manual when you need deeper product detail or a wider page tree.</p>
+          <span className="doc-hub__link">Open the live TIR manual</span>
+        </Link>
+        <Link className="doc-hub__card" to="/docs/tir/reference/platform-reference">
+          <h3>Reference and support</h3>
+          <p>Use the local reference map, billing context, release notes, and support handoff pages when the next move is not obvious.</p>
+          <span className="doc-hub__link">Open the support and reference layer</span>
+        </Link>
+      </div>
   </div>
 
   <div className="doc-hub__columns">
     <div className="doc-hub__section">
       <div className="doc-hub__section-header">
-        <h2>Start Here</h2>
-        <p>Pick the workload type first, then keep the section sidebar visible as you go deeper.</p>
+        <h2>Start with the task</h2>
+        <p>These are the fastest local routes in the curated TIR section.</p>
       </div>
       <ul className="doc-hub__list">
         <li>
+          <strong><Link to="/docs/tir/getting-started/quickstart">Quickstart</Link></strong>
+          Use this when you need the shortest local orientation path before choosing a workload.
+        </li>
+        <li>
           <strong><Link to="/docs/tir/workflows/training">Training</Link></strong>
-          Use this path when you are provisioning compute for model development or iteration-heavy runs.
+          Use this when the job is training-oriented and you want a guided local route first.
         </li>
         <li>
           <strong><Link to="/docs/tir/workflows/inference">Inference</Link></strong>
-          Use this path when you need deployment, serving, scaling, or endpoint-oriented guidance.
+          Use this when the task is serving, deployment, endpoint behavior, or inference operations.
         </li>
         <li>
           <strong><Link to="/docs/tir/workflows/research">Research</Link></strong>
-          Use this path when you are exploring experiments, environments, and iteration loops.
-        </li>
-        <li>
-          <strong><Link to="/docs/tir/guides/billing-and-usage">Billing and usage</Link></strong>
-          Keep cost, usage, and broader operating context close while the product area evolves.
+          Use this when experimentation and rapid iteration are the core of the workflow.
         </li>
       </ul>
     </div>
 
     <div className="doc-hub__callout">
       <div className="doc-hub__section-header">
-        <h2>Popular Paths</h2>
-        <p>These are the most useful routes in the current stage of the TIR docs.</p>
+        <h2>When to leave the local TIR docs</h2>
+        <p>The local TIR section is intentionally curated. Use the live docs when you need the broader product manual.</p>
       </div>
       <ul className="doc-hub__list">
         <li>
-          <strong><Link to="/docs/tir/guides/platform-paths">Platform paths</Link></strong>
-          Map common TIR jobs to the right section quickly.
+          <strong><a href="https://docs.e2enetworks.com/docs/tir/">Extended TIR docs home</a></strong>
+          Use this when you need the broader live documentation tree rather than the curated local route.
         </li>
         <li>
           <strong><Link to="/docs/tir/guides/billing-and-usage">Billing and usage</Link></strong>
-          Keep cost and usage visibility in the flow from day one.
-        </li>
-        <li>
-          <strong><a href="https://docs.e2enetworks.com/docs/tir/">Official TIR docs home</a></strong>
-          Jump to the broader live TIR manual when you need the latest product detail.
+          Stay local when you need routing help plus the live billing reference link in one place.
         </li>
         <li>
           <strong><Link to="/docs/tir/troubleshooting/support-and-release-notes">Support and release notes</Link></strong>
-          Keep updates and support routes nearby when the platform changes fast.
+          Stay local when the job is diagnosing a workflow and checking recent product movement.
         </li>
         <li>
           <strong><a href="https://docs.e2enetworks.com/docs/tir/Inference/Tutorials/codellama-7b/">Inference tutorial</a></strong>
-          Use a concrete tutorial when you need a fast example path.
+          Leave the local section for a concrete live product tutorial when you already know the exact destination you want.
         </li>
       </ul>
     </div>

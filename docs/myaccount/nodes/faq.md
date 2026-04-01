@@ -1,5 +1,6 @@
 ---
 title: FAQ & Troubleshooting
+description: Common operational questions and troubleshooting guidance for MyAccount Nodes
 sidebar_label: FAQ
 ---
 

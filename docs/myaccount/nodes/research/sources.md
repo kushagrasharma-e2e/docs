@@ -1,3 +1,8 @@
+---
+title: External Sources Used
+description: External sources used while researching the MyAccount Nodes docs
+---
+
 # External Sources Used
 
 This file records the external sources used to improve structure, terminology, and use-case framing. The documentation itself remained the primary source of truth for product behavior.

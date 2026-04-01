@@ -1,3 +1,8 @@
+---
+title: Configuration Reference
+description: Configuration reference for MyAccount Nodes
+---
+
 # Configuration Reference
 
 This page is a compact reference for common launch-time choices.

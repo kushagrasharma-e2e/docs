@@ -1,0 +1,63 @@
+/v1/datasets:
+  get:
+    tags:
+      - Datasets
+    summary: List datasets
+    operationId: listDatasets
+    responses:
+      "200":
+        description: A list of datasets.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/DatasetListResponse
+/v1/training/jobs:
+  get:
+    tags:
+      - Training Jobs
+    summary: List training jobs
+    operationId: listTrainingJobs
+    responses:
+      "200":
+        description: A list of training jobs.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/TrainingJobListResponse
+  post:
+    tags:
+      - Training Jobs
+    summary: Create a training job
+    operationId: createTrainingJob
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: ./openapi.yaml#/components/schemas/TrainingJobCreateRequest
+    responses:
+      "201":
+        description: The training job was created.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/TrainingJob
+      "400":
+        description: Invalid request.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/Error
+/v1/model-endpoints:
+  get:
+    tags:
+      - Model Endpoints
+    summary: List model endpoints
+    operationId: listModelEndpoints
+    responses:
+      "200":
+        description: A list of model endpoints.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/ModelEndpointListResponse

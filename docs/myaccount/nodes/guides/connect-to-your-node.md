@@ -1,3 +1,8 @@
+---
+title: Connect To Your Node
+description: Connect to a MyAccount node over SSH or RDP
+---
+
 # Connect To Your Node
 
 This guide helps you get from "node is running" to "I am actually inside the machine."

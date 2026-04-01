@@ -7,52 +7,53 @@ import HomepageFeatures from "../components/HomepageFeatures";
 
 import styles from "./index.module.css";
 
-const heroStats = [
+const decisionCards = [
   {
-    label: "Product-first routing",
-    value: "Go straight from the homepage into MyAccount or TIR without an extra intro detour.",
-  },
-  {
-    label: "Sidebar-led exploration",
-    value: "Each product landing page keeps its sidebar visible so the next step is obvious.",
-  },
-  {
-    label: "Focused navigation",
-    value: "Release Notes and Help stay discoverable through lighter secondary paths.",
-  },
-];
-
-const productPaths = [
-  {
-    eyebrow: "Primary product path",
-    title: "MyAccount",
+    eyebrow: "Start with Docs",
+    title: "Read guides and product workflows",
     description:
-      "Open the MyAccount hub for compute, storage, database, network, billing, settings, and account-level workflows.",
-    to: "/docs/myaccount",
-    label: "Open MyAccount",
+      "Use docs for quickstarts, task guides, troubleshooting, and product maps across MyAccount and TIR.",
+    to: "/docs/intro",
+    label: "Browse docs",
   },
   {
-    eyebrow: "Primary product path",
-    title: "TIR",
+    eyebrow: "Start with API",
+    title: "Build against endpoints",
     description:
-      "Open the TIR hub for training, inference, research, and curated paths into the latest platform guidance.",
-    to: "/docs/tir",
-    label: "Open TIR",
+      "Use the API lane when you already know the job is schema, auth, request, or integration work.",
+    to: "/api",
+    label: "Open API reference",
   },
-];
-
-const utilityPaths = [
   {
-    title: "Release Notes",
+    eyebrow: "Check changes",
+    title: "Verify recent platform updates",
+    description:
+      "Use release notes when you need to confirm what shipped before debugging a workflow or UI change.",
     to: "/release-notes",
+    label: "View release notes",
+  },
+];
+
+const quickLinks = [
+  {
+    label: "Launch a MyAccount node",
+    to: "/docs/myaccount/nodes/getting-started/quickstart",
   },
   {
-    title: "Help",
+    label: "Get started in TIR",
+    to: "/docs/tir/getting-started/quickstart",
+  },
+  {
+    label: "Secure networking",
+    to: "/docs/myaccount/network",
+  },
+  {
+    label: "Find support",
     to: "/docs/help",
   },
 ];
 
-const heroSignals = ["MyAccount", "TIR", "Release Notes", "Help"];
+const heroSignals = ["MyAccount", "TIR", "API", "Release Notes", "Support"];
 
 function HomepageHeader() {
   return (
@@ -61,13 +62,10 @@ function HomepageHeader() {
         <div className={styles.heroGrid}>
           <div className={styles.heroContent}>
             <div className={styles.eyebrow}>E2E Networks Documentation</div>
-            <h1 className={styles.heroTitle}>
-              Choose a product and get into the docs fast.
-            </h1>
+            <h1 className={styles.heroTitle}>Find the right answer faster.</h1>
             <p className={styles.heroSubtitle}>
-              The homepage is now the main routing layer for the documentation
-              experience, with MyAccount and TIR as the two clear entry points
-              and lighter access to Help and Release Notes.
+              Start with Docs for guided tasks, API for integration work, Release
+              Notes for recent changes, and Support when the workflow is blocked.
             </p>
 
             <div className={styles.signalRow}>
@@ -79,41 +77,42 @@ function HomepageHeader() {
             </div>
 
             <div className={styles.heroActions}>
-              <Link className="button button--primary button--lg" to="/docs/myaccount">
-                Open MyAccount Docs
+              <Link className="button button--primary button--lg" to="/docs/intro">
+                Open Docs
               </Link>
               <Link
                 className={clsx("button button--outline button--lg", styles.secondaryAction)}
-                to="/docs/tir"
+                to="/api"
               >
-                Open TIR Docs
+                Open API Reference
               </Link>
             </div>
 
-            <div className={styles.heroStats}>
-              {heroStats.map((stat) => (
-                <div key={stat.label} className={styles.statCard}>
-                  <span className={styles.statLabel}>{stat.label}</span>
-                  <p className={styles.statValue}>{stat.value}</p>
-                </div>
-              ))}
+            <div className={styles.quickLinksPanel}>
+              <span className={styles.quickLinksLabel}>Popular starting points</span>
+              <div className={styles.quickLinks}>
+                {quickLinks.map((item) => (
+                  <Link key={item.label} className={styles.quickLink} to={item.to}>
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
           <div className={styles.heroPanel}>
             <div className={styles.panelHeader}>
               <span className={styles.panelEyebrow}>Start Here</span>
-              <h2 className={styles.panelTitle}>MyAccount and TIR are the two primary product hubs.</h2>
+              <h2 className={styles.panelTitle}>Choose the route that matches the job.</h2>
               <p className={styles.panelDescription}>
-                Go directly into the product you need, then use the visible
-                sidebar inside that section to continue deeper without hunting
-                through extra landing pages.
+                Most visits start in one of these three places. Pick the surface
+                that matches the question in your head, then go deeper by product.
               </p>
             </div>
 
-            <div className={styles.entryGrid}>
-              {productPaths.map((item) => (
-                <Link key={item.title} className={styles.entryCard} to={item.to}>
+            <div className={styles.decisionGrid}>
+              {decisionCards.map((item) => (
+                <Link key={item.title} className={styles.decisionCard} to={item.to}>
                   <div>
                     <span className={styles.entryEyebrow}>{item.eyebrow}</span>
                     <h3>{item.title}</h3>
@@ -124,28 +123,16 @@ function HomepageHeader() {
               ))}
             </div>
 
-            <div className={styles.utilityPanel}>
-              <span className={styles.utilityLabel}>Quick access</span>
-              <div className={styles.utilityLinks}>
-                {utilityPaths.map((item) => (
-                  <Link key={item.title} className={styles.utilityLink} to={item.to}>
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
             <div className={styles.panelFooter}>
               <div>
-                <span className={styles.panelFooterLabel}>Need the full docs map?</span>
+                <span className={styles.panelFooterLabel}>Need help quickly?</span>
                 <p>
-                  The docs hub still exists when you want a cross-product
-                  overview, but the homepage now optimizes for direct product
-                  entry.
+                  Use Support for troubleshooting and handoff, or jump straight
+                  to release notes when behavior may have changed recently.
                 </p>
               </div>
-              <Link className={styles.footerLink} to="/docs/intro">
-                Open Docs Hub
+              <Link className={styles.footerLink} to="/docs/help">
+                Open Support
               </Link>
             </div>
           </div>

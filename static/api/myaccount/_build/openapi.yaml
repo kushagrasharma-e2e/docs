@@ -1,0 +1,294 @@
+openapi: 3.0.3
+info:
+  title: MyAccount API
+  version: 1.0.0
+  description: |
+    API reference for MyAccount services on E2E Networks.
+servers:
+  - url: 'https://api.e2enetworks.com/myaccount'
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Nodes
+    description: 'Create, inspect, and remove compute nodes.'
+  - name: Load Balancers
+    description: Manage public-facing load balancers.
+  - name: Invoices
+    description: Review billing invoices and totals.
+x-tagGroups:
+  - name: Compute
+    tags:
+      - Nodes
+  - name: Networking
+    tags:
+      - Load Balancers
+  - name: Billing
+    tags:
+      - Invoices
+paths:
+  /v1/nodes:
+    get:
+      tags:
+        - Nodes
+      summary: List nodes
+      operationId: listNodes
+      responses:
+        '200':
+          description: A paginated list of nodes.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NodeListResponse'
+    post:
+      tags:
+        - Nodes
+      summary: Create a node
+      operationId: createNode
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NodeCreateRequest'
+      responses:
+        '201':
+          description: The node was created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Node'
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  '/v1/nodes/{nodeId}':
+    parameters:
+      - name: nodeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags:
+        - Nodes
+      summary: Get a node
+      operationId: getNode
+      responses:
+        '200':
+          description: Node details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Node'
+        '404':
+          description: The node was not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      tags:
+        - Nodes
+      summary: Delete a node
+      operationId: deleteNode
+      responses:
+        '204':
+          description: The node was deleted.
+        '404':
+          description: The node was not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /v1/load-balancers:
+    get:
+      tags:
+        - Load Balancers
+      summary: List load balancers
+      operationId: listLoadBalancers
+      responses:
+        '200':
+          description: A list of load balancers.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoadBalancerListResponse'
+  /v1/invoices:
+    get:
+      tags:
+        - Invoices
+      summary: List invoices
+      operationId: listInvoices
+      responses:
+        '200':
+          description: A list of invoices.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvoiceListResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key issued for MyAccount API access.
+  schemas:
+    Error:
+      type: object
+      x-tags:
+        - Nodes
+      properties:
+        message:
+          type: string
+          example: Resource not found.
+        requestId:
+          type: string
+          example: req_01HXYZ123ABC
+      required:
+        - message
+        - requestId
+    Node:
+      type: object
+      x-tags:
+        - Nodes
+      properties:
+        id:
+          type: string
+          example: node_123
+        name:
+          type: string
+          example: production-app-1
+        status:
+          type: string
+          example: running
+        flavor:
+          type: string
+          example: e2-standard-4
+        region:
+          type: string
+          example: delhi
+      required:
+        - id
+        - name
+        - status
+        - flavor
+        - region
+    NodeListResponse:
+      type: object
+      x-tags:
+        - Nodes
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Node'
+        total:
+          type: integer
+          example: 2
+      required:
+        - items
+        - total
+    NodeCreateRequest:
+      type: object
+      x-tags:
+        - Nodes
+      properties:
+        name:
+          type: string
+          example: production-app-1
+        flavor:
+          type: string
+          example: e2-standard-4
+        image:
+          type: string
+          example: ubuntu-24-04-lts
+        region:
+          type: string
+          example: delhi
+      required:
+        - name
+        - flavor
+        - image
+        - region
+    LoadBalancer:
+      type: object
+      x-tags:
+        - Load Balancers
+      properties:
+        id:
+          type: string
+          example: lb_123
+        name:
+          type: string
+          example: public-web
+        ipAddress:
+          type: string
+          example: 203.0.113.10
+        status:
+          type: string
+          example: active
+      required:
+        - id
+        - name
+        - ipAddress
+        - status
+    LoadBalancerListResponse:
+      type: object
+      x-tags:
+        - Load Balancers
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LoadBalancer'
+        total:
+          type: integer
+          example: 1
+      required:
+        - items
+        - total
+    Invoice:
+      type: object
+      x-tags:
+        - Invoices
+      properties:
+        id:
+          type: string
+          example: inv_123
+        billingMonth:
+          type: string
+          example: 2026-03
+        totalAmount:
+          type: number
+          format: float
+          example: 1249.5
+        currency:
+          type: string
+          example: INR
+        status:
+          type: string
+          example: paid
+      required:
+        - id
+        - billingMonth
+        - totalAmount
+        - currency
+        - status
+    InvoiceListResponse:
+      type: object
+      x-tags:
+        - Invoices
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Invoice'
+        total:
+          type: integer
+          example: 12
+      required:
+        - items
+        - total

@@ -1,3 +1,8 @@
+---
+title: What This Node Is
+description: Overview of what a MyAccount node is and when to use it
+---
+
 # What This Node Is
 
 This page gives you the mental model you need before you start comparing plans or workflows.

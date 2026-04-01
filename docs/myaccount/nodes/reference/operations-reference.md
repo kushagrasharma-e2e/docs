@@ -1,3 +1,8 @@
+---
+title: Operations Reference
+description: Operations reference for managing MyAccount Nodes
+---
+
 # Operations Reference
 
 This page is a quick lookup for the main node actions.

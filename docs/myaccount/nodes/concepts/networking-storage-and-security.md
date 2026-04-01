@@ -1,3 +1,8 @@
+---
+title: Networking, Storage, And Security
+description: Networking, storage, and security concepts for MyAccount Nodes
+---
+
 # Networking, Storage, And Security
 
 This page explains the main choices you make during launch and later operations.

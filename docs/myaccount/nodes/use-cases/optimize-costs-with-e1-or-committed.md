@@ -1,3 +1,8 @@
+---
+title: Optimize Costs With E1 Or Committed Billing
+description: Optimize MyAccount Nodes costs with E1 or committed billing
+---
+
 # Optimize Costs With E1 Or Committed Billing
 
 This use case helps you choose a billing model based on how you actually run the node.

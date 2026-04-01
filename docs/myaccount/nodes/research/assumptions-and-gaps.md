@@ -1,3 +1,8 @@
+---
+title: Assumptions And Gaps
+description: Research notes on assumptions and coverage gaps in the MyAccount Nodes docs
+---
+
 # Assumptions And Gaps
 
 This file records areas where the documentation is unclear, incomplete, or internally hard to reconcile.

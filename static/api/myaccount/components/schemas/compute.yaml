@@ -1,0 +1,65 @@
+Node:
+  type: object
+  x-tags:
+    - Nodes
+  properties:
+    id:
+      type: string
+      example: node_123
+    name:
+      type: string
+      example: production-app-1
+    status:
+      type: string
+      example: running
+    flavor:
+      type: string
+      example: e2-standard-4
+    region:
+      type: string
+      example: delhi
+  required:
+    - id
+    - name
+    - status
+    - flavor
+    - region
+
+NodeListResponse:
+  type: object
+  x-tags:
+    - Nodes
+  properties:
+    items:
+      type: array
+      items:
+        $ref: "#/Node"
+    total:
+      type: integer
+      example: 2
+  required:
+    - items
+    - total
+
+NodeCreateRequest:
+  type: object
+  x-tags:
+    - Nodes
+  properties:
+    name:
+      type: string
+      example: production-app-1
+    flavor:
+      type: string
+      example: e2-standard-4
+    image:
+      type: string
+      example: ubuntu-24-04-lts
+    region:
+      type: string
+      example: delhi
+  required:
+    - name
+    - flavor
+    - image
+    - region

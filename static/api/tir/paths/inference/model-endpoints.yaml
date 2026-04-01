@@ -1,0 +1,13 @@
+/v1/model-endpoints:
+  get:
+    tags:
+      - Model Endpoints
+    summary: List model endpoints
+    operationId: listModelEndpoints
+    responses:
+      "200":
+        description: A list of model endpoints.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/ModelEndpointListResponse

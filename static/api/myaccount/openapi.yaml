@@ -1,0 +1,50 @@
+openapi: 3.0.3
+info:
+  title: MyAccount API
+  version: 1.0.0
+  description: |
+    API reference for MyAccount services on E2E Networks.
+servers:
+  - url: https://api.e2enetworks.com/myaccount
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Nodes
+    description: Create, inspect, and remove compute nodes.
+  - name: Load Balancers
+    description: Manage public-facing load balancers.
+  - name: Invoices
+    description: Review billing invoices and totals.
+x-tagGroups:
+  - name: Compute
+    tags:
+      - Nodes
+  - name: Networking
+    tags:
+      - Load Balancers
+  - name: Billing
+    tags:
+      - Invoices
+paths:
+  $ref: "./merged_output.yaml"
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      $ref: ./components/securitySchemes/api-key.yaml
+  schemas:
+    Error:
+      $ref: ./components/schemas/common.yaml#/Error
+    Node:
+      $ref: ./components/schemas/compute.yaml#/Node
+    NodeListResponse:
+      $ref: ./components/schemas/compute.yaml#/NodeListResponse
+    NodeCreateRequest:
+      $ref: ./components/schemas/compute.yaml#/NodeCreateRequest
+    LoadBalancer:
+      $ref: ./components/schemas/network.yaml#/LoadBalancer
+    LoadBalancerListResponse:
+      $ref: ./components/schemas/network.yaml#/LoadBalancerListResponse
+    Invoice:
+      $ref: ./components/schemas/billing.yaml#/Invoice
+    InvoiceListResponse:
+      $ref: ./components/schemas/billing.yaml#/InvoiceListResponse

@@ -1,3 +1,8 @@
+---
+title: Build A Reusable Golden Image
+description: Build a reusable golden image for MyAccount Nodes
+---
+
 # Build A Reusable Golden Image
 
 This use case is for teams that want a repeatable starting point for many nodes.

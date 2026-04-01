@@ -1,11 +1,11 @@
 ---
 title: Platform Reference
-description: Concise reference map for the TIR section
+description: Concise reference map for the curated local TIR section
 ---
 
 # Platform Reference
 
-This page is the concise reference map for how TIR is organized in this site.
+This page is the concise reference map for how the curated local TIR section is organized in this site.
 
 ## Section map
 
@@ -17,4 +17,4 @@ This page is the concise reference map for how TIR is organized in this site.
 
 ## External reference
 
-Use the [official TIR documentation home](https://docs.e2enetworks.com/docs/tir/) for the broader live reference beyond this curated section.
+Use the [official TIR documentation home](https://docs.e2enetworks.com/docs/tir/) for the broader live reference beyond this curated local section.

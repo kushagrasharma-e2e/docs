@@ -11,120 +11,126 @@ import Link from "@docusaurus/Link";
 <div className="doc-hub">
   <div className="doc-hub__hero doc-hub__hero--plain">
     <span className="doc-hub__eyebrow">Documentation</span>
-    <h2>MyAccount documentation, organized like the product UI.</h2>
-    <p className="doc-hub__lede">
-      MyAccount is broader than Nodes. The sidebar now mirrors the product
-      structure across Compute, Storage, Database, Network, Billing, Settings,
-      Compliance, and Support so the docs can grow in the same shape as the
-      platform.
-    </p>
+    <h2>Start with the task, then move into the product area that owns it.</h2>
+    <p className="doc-hub__lede">MyAccount is broader than Nodes. Use this hub when you want the fastest route into compute, networking, billing, storage, account controls, or support without scanning the entire sidebar first.</p>
+    <div className="doc-hub__tag-row">
+      <span className="doc-hub__tag">Compute</span>
+      <span className="doc-hub__tag">Network</span>
+      <span className="doc-hub__tag">Billing</span>
+      <span className="doc-hub__tag">Security</span>
+      <span className="doc-hub__tag">Support</span>
+    </div>
   </div>
 
   <div className="doc-hub__actions">
-    <Link className="doc-hub__action" to="/docs/myaccount/compute">
-      <h3>Start with Compute</h3>
-      <p>Open Nodes, Auto Scaling, Kubernetes, images, volumes, and the rest of the compute surface.</p>
-      <span className="doc-hub__link">Open Compute</span>
+    <Link className="doc-hub__action" to="/docs/myaccount/nodes/getting-started/quickstart">
+      <h3>Launch your first node</h3>
+      <p>Use the fastest route from account access to a running node with clear next steps.</p>
+      <span className="doc-hub__link">Open quickstart</span>
+    </Link>
+    <Link className="doc-hub__action" to="/docs/myaccount/auto-scale/scaling">
+      <h3>Scale and distribute traffic</h3>
+      <p>Move from a single node into scaling, load balancing, and safer rollout patterns.</p>
+      <span className="doc-hub__link">Open scaling</span>
     </Link>
     <Link className="doc-hub__action" to="/docs/myaccount/network">
-      <h3>Explore Network</h3>
-      <p>Jump into DNS, VPC, reserve IP, firewall, CDN, and other connectivity-focused areas.</p>
-      <span className="doc-hub__link">Open Network</span>
+      <h3>Secure networking and access</h3>
+      <p>Jump into VPC, reserve IP, firewall, DNS, and security controls when connectivity is the problem.</p>
+      <span className="doc-hub__link">Open network and security</span>
     </Link>
     <Link className="doc-hub__action" to="/docs/myaccount/billing">
-      <h3>Account and Billing</h3>
-      <p>Find pay-now, statements, coupons, TDS, and profile-related account paths.</p>
-      <span className="doc-hub__link">Open Billing</span>
-    </Link>
-    <Link className="doc-hub__action" to="/docs/myaccount/settings">
-      <h3>Settings and Access</h3>
-      <p>Use account-level docs for audit log, security, SSH keys, abuse logs, and general settings.</p>
-      <span className="doc-hub__link">Open Settings</span>
+      <h3>Handle billing and account ops</h3>
+      <p>Open statements, payments, coupons, TDS, profile management, and account-level controls when the work is administrative.</p>
+      <span className="doc-hub__link">Open billing and settings</span>
     </Link>
   </div>
 
-  <div className="doc-hub__section">
-    <div className="doc-hub__section-header">
-      <h2>Explore MyAccount</h2>
-      <p>Jump directly to the product area you need without treating Nodes as the whole platform.</p>
-    </div>
-    <div className="doc-hub__grid doc-hub__grid--compact">
-      <Link className="doc-hub__card" to="/docs/myaccount/compute">
-        <h3>Compute</h3>
-        <p>Nodes, load balancers, auto scaling, Kubernetes, images, volumes, and related compute surfaces.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
-      <Link className="doc-hub__card" to="/docs/myaccount/storage">
-        <h3>Storage</h3>
-        <p>Scalable file system, object storage, and EPFS in their own storage-specific area.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
-      <Link className="doc-hub__card" to="/docs/myaccount/database">
-        <h3>Database</h3>
-        <p>DBaaS and parameter-group surfaces now have a dedicated home in the docs tree.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
-      <Link className="doc-hub__card" to="/docs/myaccount/network">
-        <h3>Network</h3>
-        <p>CDN, firewall, DNS, reserve IP, VPC, security group, and security compliance follow the UI ordering.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
-      <Link className="doc-hub__card" to="/docs/myaccount/billing">
-        <h3>Billing</h3>
-        <p>Payments, statements, coupons, TDS, and related account surfaces are grouped together.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
-      <Link className="doc-hub__card" to="/docs/myaccount/settings">
-        <h3>Settings</h3>
-        <p>Audit log, account security, SSH keys, abuse logs, and tags live in an account-level section.</p>
-        <span className="doc-hub__link">Open section</span>
-      </Link>
-    </div>
+    <div className="doc-hub__section">
+      <div className="doc-hub__section-header">
+        <h2>Common operating jobs</h2>
+        <p>Use these product areas once you know the kind of work you are doing.</p>
+      </div>
+      <div className="doc-hub__grid doc-hub__grid--compact">
+        <Link className="doc-hub__card" to="/docs/myaccount/compute">
+          <h3>Compute</h3>
+          <p>Go here for nodes, load balancers, images, volumes, backups, and scale-oriented compute operations.</p>
+          <span className="doc-hub__link">Run compute work</span>
+        </Link>
+        <Link className="doc-hub__card" to="/docs/myaccount/network">
+          <h3>Network</h3>
+          <p>Go here for DNS, firewall, reserve IP, VPC, CDN, and connectivity or access control work.</p>
+          <span className="doc-hub__link">Solve network tasks</span>
+        </Link>
+        <Link className="doc-hub__card" to="/docs/myaccount/storage">
+          <h3>Storage and data</h3>
+          <p>Go here for object storage, file systems, EPFS, DBaaS, and the persistence layer around your workloads.</p>
+          <span className="doc-hub__link">Work on storage and data</span>
+        </Link>
+        <Link className="doc-hub__card" to="/docs/myaccount/settings">
+          <h3>Account controls</h3>
+          <p>Go here for audit log, security, SSH keys, tags, abuse logs, and general platform administration.</p>
+          <span className="doc-hub__link">Manage the account</span>
+        </Link>
+        <Link className="doc-hub__card" to="/docs/myaccount/billing">
+          <h3>Billing</h3>
+          <p>Go here for payments, statements, coupons, TDS, and account-level financial workflows.</p>
+          <span className="doc-hub__link">Handle billing</span>
+        </Link>
+        <Link className="doc-hub__card" to="/docs/myaccount/support">
+          <h3>Support and escalation</h3>
+          <p>Go here when the issue needs product support, SOC or abuse reporting, or a formal escalation path.</p>
+          <span className="doc-hub__link">Get support</span>
+        </Link>
+      </div>
   </div>
 
   <div className="doc-hub__columns">
     <div className="doc-hub__section">
       <div className="doc-hub__section-header">
-        <h2>Start Here</h2>
-        <p>Use these paths when you want the shortest route into what is already useful today.</p>
+        <h2>Start fast</h2>
+        <p>These are the shortest routes to useful work in the current MyAccount docs.</p>
       </div>
       <ul className="doc-hub__list">
         <li>
-          <strong><Link to="/docs/myaccount/compute">Open Compute first</Link></strong>
-          Start here if you are working with infrastructure surfaces and want the area that currently has the most documentation.
-        </li>
-        <li>
           <strong><Link to="/docs/myaccount/nodes/getting-started/quickstart">Launch your first node</Link></strong>
-          Use the Nodes quickstart when the task is getting from account access to a working instance.
+          Use this when the goal is first success on the platform instead of a full tour.
         </li>
         <li>
-          <strong><Link to="/docs/myaccount/network">Check the network section</Link></strong>
-          Use this when the task is DNS, VPC, reserve IP, firewall, or other connectivity-related work.
+          <strong><Link to="/docs/myaccount/nodes/guides/daily-operations">Run day-2 operations</Link></strong>
+          Use this when the node already exists and the task is operating, changing, or maintaining it safely.
         </li>
         <li>
-          <strong><Link to="/docs/myaccount/settings">Use Settings for account controls</Link></strong>
-          Keep audit, security, SSH keys, and general account administration separate from node-level workflows.
+          <strong><Link to="/docs/myaccount/auto-scale/scaling">Scale beyond one machine</Link></strong>
+          Use this when growth, high availability, or rollout safety is becoming the main problem.
+        </li>
+        <li>
+          <strong><Link to="/docs/myaccount/network">Secure networking and access</Link></strong>
+          Use this when the issue is exposure, reachability, firewall policy, or account-to-workload connectivity.
         </li>
       </ul>
     </div>
 
     <div className="doc-hub__callout">
       <div className="doc-hub__section-header">
-        <h2>Popular Today</h2>
-        <p>These are the most useful destinations in the current stage of the docs.</p>
+        <h2>Reference and escalation</h2>
+        <p>Use these when the work moves beyond guided product docs.</p>
       </div>
       <ul className="doc-hub__list">
         <li>
-          <strong><Link to="/docs/myaccount/nodes/">Nodes</Link></strong>
-          The most complete section today for provisioning, operations, troubleshooting, and image-related tasks.
+          <strong><Link to="/api/myaccount/">MyAccount API</Link></strong>
+          Switch to API for endpoint-level automation, request models, and integration work.
         </li>
         <li>
-          <strong><Link to="/docs/myaccount/auto-scale/scaling">Auto Scaling</Link></strong>
-          Scaling guidance remains inside Compute instead of standing in for the full product.
+          <strong><Link to="/release-notes">Release Notes</Link></strong>
+          Check recent platform changes before assuming a workflow still behaves the same way it did last week.
         </li>
         <li>
-          <strong><Link to="/docs/help">Help</Link></strong>
-          Use support-oriented documentation without collapsing MyAccount into one compute-only experience.
+          <strong><Link to="/docs/help">Support lane</Link></strong>
+          Switch to Support when the issue is blocked, operational, or needs handoff beyond product docs.
+        </li>
+        <li>
+          <strong><Link to="/docs/myaccount/compute">Full section map</Link></strong>
+          Use the section map when you know the product area, but not yet the exact page.
         </li>
       </ul>
     </div>

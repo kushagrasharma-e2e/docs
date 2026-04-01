@@ -40,7 +40,7 @@ const config: Config = {
   },
 
   url: "https://kushagrasharma-e2e.github.io/",
-  baseUrl: "/docs/",
+  baseUrl: "/e2e-docs/",
 
   organizationName: "E2E-Networks",
   projectName: "docs",
@@ -77,14 +77,27 @@ const config: Config = {
           onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: [
-            "./src/css/custom.css",
-            "./src/css/myaccount/sidebars.css",
-            "./src/css/tir/sidebars.css",
-          ],
+          customCss: ["./src/css/custom.css"],
         },
       } satisfies Preset.Options,
     ],
+  ],
+
+  plugins: [
+    function disableNodePathFallback() {
+      return {
+        name: "disable-node-path-fallback",
+        configureWebpack() {
+          return {
+            resolve: {
+              fallback: {
+                path: false,
+              },
+            },
+          };
+        },
+      };
+    },
   ],
 
   themeConfig: {
@@ -93,6 +106,9 @@ const config: Config = {
       apiKey: "4fb1d596c750f2c6b448cbef38609a10",
       indexName: "e2e-docs-crawler",
       contextualSearch: true,
+      // Ask AI visibility also depends on Algolia dashboard setup:
+      // the assistant must exist and the site domain must be whitelisted there.
+      askAi: "UlKCYCNf39zp",
     },
     // Replace with your project's social card
     // image: 'img/docusaurus-social-card.jpg',
@@ -109,27 +125,38 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "myaccountSidebar",
+          type: "doc",
+          docId: "intro",
           position: "left",
-          label: "MyAccount",
+          label: "Docs",
+          activeBaseRegex: "^/docs(?:/intro|/myaccount|/tir)?(?:/.*)?$",
         },
         {
-          type: "docSidebar",
-          sidebarId: "tirSidebar",
           position: "left",
-          label: "TIR",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "helpSidebar",
-          position: "left",
-          label: "Help",
+          label: "API",
+          activeBaseRegex: "^/api(?:/.*)?$",
+          items: [
+            {
+              label: "MyAccount API",
+              to: "/api/myaccount",
+            },
+            {
+              label: "TIR API",
+              to: "/api/tir",
+            },
+          ],
         },
         {
           to: "/release-notes",
           position: "left",
           label: "Release Notes",
+        },
+        {
+          type: "doc",
+          docId: "help/index",
+          position: "left",
+          label: "Support",
+          activeBasePath: "/docs/help",
         },
       ],
     },

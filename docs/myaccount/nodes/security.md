@@ -1,5 +1,6 @@
 ---
 title: Security & Hardening
+description: Security baseline and hardening guidance for MyAccount Nodes
 sidebar_label: Security
 ---
 

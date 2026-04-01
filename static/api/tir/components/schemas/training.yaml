@@ -1,0 +1,57 @@
+TrainingJob:
+  type: object
+  x-tags:
+    - Training Jobs
+  properties:
+    id:
+      type: string
+      example: job_123
+    model:
+      type: string
+      example: llama-3-8b
+    datasetId:
+      type: string
+      example: ds_123
+    status:
+      type: string
+      example: running
+  required:
+    - id
+    - model
+    - datasetId
+    - status
+
+TrainingJobCreateRequest:
+  type: object
+  x-tags:
+    - Training Jobs
+  properties:
+    model:
+      type: string
+      example: llama-3-8b
+    datasetId:
+      type: string
+      example: ds_123
+    instanceType:
+      type: string
+      example: a100-80gb
+  required:
+    - model
+    - datasetId
+    - instanceType
+
+TrainingJobListResponse:
+  type: object
+  x-tags:
+    - Training Jobs
+  properties:
+    items:
+      type: array
+      items:
+        $ref: "#/TrainingJob"
+    total:
+      type: integer
+      example: 3
+  required:
+    - items
+    - total

@@ -1,3 +1,8 @@
+---
+title: Migrate An AWS Image
+description: Migrate an AWS image into MyAccount Nodes
+---
+
 # Migrate An AWS Image
 
 This use case is for teams that already have a working EC2 instance and want to run that environment in E2E without rebuilding it manually.

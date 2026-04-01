@@ -1,3 +1,8 @@
+---
+title: Snapshots, Images, And Backups
+description: Protect and reuse MyAccount Nodes with snapshots, images, and backups
+---
+
 # Snapshots, Images, And Backups
 
 This guide helps you protect a running environment and reuse it later.

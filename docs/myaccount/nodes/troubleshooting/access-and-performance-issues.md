@@ -1,3 +1,8 @@
+---
+title: Access And Performance Issues
+description: Troubleshoot access, latency, and performance issues for MyAccount Nodes
+---
+
 # Access And Performance Issues
 
 This guide covers the problems most likely to stop you from using the node at all: no access, slowness, high CPU, or full disk.

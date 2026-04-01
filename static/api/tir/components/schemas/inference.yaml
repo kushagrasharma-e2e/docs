@@ -1,0 +1,38 @@
+ModelEndpoint:
+  type: object
+  x-tags:
+    - Model Endpoints
+  properties:
+    id:
+      type: string
+      example: endpoint_123
+    model:
+      type: string
+      example: llama-3-8b-instruct
+    status:
+      type: string
+      example: active
+    publicUrl:
+      type: string
+      example: https://tir.e2enetworks.com/endpoints/endpoint_123
+  required:
+    - id
+    - model
+    - status
+    - publicUrl
+
+ModelEndpointListResponse:
+  type: object
+  x-tags:
+    - Model Endpoints
+  properties:
+    items:
+      type: array
+      items:
+        $ref: "#/ModelEndpoint"
+    total:
+      type: integer
+      example: 2
+  required:
+    - items
+    - total

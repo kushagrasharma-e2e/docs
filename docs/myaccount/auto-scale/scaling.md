@@ -1,5 +1,6 @@
 ---
 title: Scaling & Clusters
+description: Scaling patterns for nodes, scale groups, and clusters on MyAccount
 sidebar_label: Scaling
 ---
 

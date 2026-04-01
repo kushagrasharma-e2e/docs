@@ -1,43 +1,91 @@
 ---
-title: Documentation Hub
-description: Overview of the documentation structure across E2E Networks
+title: Docs
+description: Start in the E2E Networks docs lane, then choose MyAccount or TIR
 ---
 
 import Link from "@docusaurus/Link";
 
-# Documentation Hub
+# Docs
 
 <div className="doc-hub">
   <div className="doc-hub__hero">
-    <span className="doc-hub__eyebrow">Overview</span>
-    <h2>Use this page only when you want the full map across products.</h2>
-    <p>
-      The homepage is now the main entry point, but this hub still provides a
-      useful cross-product overview when you want to understand the whole
-      documentation structure before choosing a path.
-    </p>
+    <span className="doc-hub__eyebrow">Documentation Lane</span>
+    <h2>Start with the product or route that matches the job.</h2>
+    <p>Use Docs when you want guided tasks, quickstarts, workflows, and section maps. From here, choose MyAccount or TIR, or jump out to API and Support if the task is integration-shaped or blocked.</p>
   </div>
 
-  <div className="doc-hub__grid">
-    <Link className="doc-hub__card" to="/docs/myaccount">
+  <div className="doc-hub__actions">
+    <Link className="doc-hub__action" to="/docs/myaccount">
       <h3>MyAccount</h3>
-      <p>Infrastructure, operations, workflows, troubleshooting, and reference.</p>
-      <span className="doc-hub__link">Open MyAccount</span>
+      <p>Open the MyAccount hub for compute, storage, database, network, billing, account controls, and support paths.</p>
+      <span className="doc-hub__link">Open MyAccount docs</span>
     </Link>
-    <Link className="doc-hub__card" to="/docs/tir">
+    <Link className="doc-hub__action" to="/docs/tir">
       <h3>TIR</h3>
-      <p>Training, inference, research, and curated product guidance.</p>
-      <span className="doc-hub__link">Open TIR</span>
+      <p>Open the TIR hub for curated routes into training, inference, research, billing context, and support handoff.</p>
+      <span className="doc-hub__link">Open TIR docs</span>
     </Link>
-    <Link className="doc-hub__card" to="/release-notes">
-      <h3>Release Notes</h3>
-      <p>Track launches, changes, and platform updates across MyAccount and TIR.</p>
-      <span className="doc-hub__link">Open release notes</span>
+    <Link className="doc-hub__action" to="/api">
+      <h3>API</h3>
+      <p>Jump to API when the job is endpoint discovery, request validation, auth, or integration work.</p>
+      <span className="doc-hub__link">Open API reference</span>
     </Link>
-    <Link className="doc-hub__card" to="/docs/help">
-      <h3>Help</h3>
-      <p>Support-oriented guides and troubleshooting flows that sit outside product hubs.</p>
-      <span className="doc-hub__link">Open Help</span>
+    <Link className="doc-hub__action" to="/docs/help">
+      <h3>Support</h3>
+      <p>Use Support when the workflow is blocked, incident-driven, or needs a clearer handoff path.</p>
+      <span className="doc-hub__link">Open support</span>
     </Link>
+  </div>
+
+  <div className="doc-hub__columns">
+    <div className="doc-hub__section">
+      <div className="doc-hub__section-header">
+        <h2>Popular starting points</h2>
+        <p>Use these when you already know the shortest useful next step.</p>
+      </div>
+      <ul className="doc-hub__list">
+        <li>
+          <strong><Link to="/docs/myaccount/nodes/getting-started/quickstart">Launch your first MyAccount node</Link></strong>
+          Start here for the fastest first-success path in MyAccount.
+        </li>
+        <li>
+          <strong><Link to="/docs/tir/getting-started/quickstart">Orient inside TIR quickly</Link></strong>
+          Use the TIR quickstart when you want the fastest path into training, inference, or research.
+        </li>
+        <li>
+          <strong><Link to="/api">Open API reference</Link></strong>
+          Use this when the task is endpoint-level integration rather than guided product work.
+        </li>
+        <li>
+          <strong><Link to="/release-notes">Check Release Notes</Link></strong>
+          Verify recent platform changes when behavior, UI, or workflows may have shifted.
+        </li>
+      </ul>
+    </div>
+
+    <div className="doc-hub__callout">
+      <div className="doc-hub__section-header">
+        <h2>Pick the route by question type</h2>
+        <p>Choose the surface that best matches what you need right now.</p>
+      </div>
+      <ul className="doc-hub__list">
+        <li>
+          <strong>Docs</strong>
+          Use Docs for quickstarts, workflows, troubleshooting, and section maps.
+        </li>
+        <li>
+          <strong>API</strong>
+          Use API when you need endpoints, request shapes, auth details, or schemas.
+        </li>
+        <li>
+          <strong>Release Notes</strong>
+          Use Release Notes when you need to understand what changed and when.
+        </li>
+        <li>
+          <strong>Support</strong>
+          Use Support when the task needs escalation, troubleshooting handoff, or operational help.
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

@@ -1,0 +1,13 @@
+/v1/load-balancers:
+  get:
+    tags:
+      - Load Balancers
+    summary: List load balancers
+    operationId: listLoadBalancers
+    responses:
+      "200":
+        description: A list of load balancers.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/LoadBalancerListResponse

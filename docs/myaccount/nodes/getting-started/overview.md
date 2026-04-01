@@ -1,3 +1,8 @@
+---
+title: Overview
+description: Overview of the MyAccount Nodes section and learning path
+---
+
 # Overview
 
 This guide helps you understand what success looks like before you start.

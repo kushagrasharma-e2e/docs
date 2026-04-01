@@ -1,0 +1,97 @@
+.page {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.hero {
+  padding-top: 0.2rem;
+}
+
+.heroCard {
+  border: 1px solid var(--doc-border-soft);
+  border-radius: 22px;
+  background: var(--doc-surface-panel);
+  box-shadow: var(--doc-elevation-1);
+  padding: clamp(1rem, 1.8vw, 1.35rem);
+}
+
+.eyebrow,
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  background: var(--doc-surface-muted);
+  color: var(--ifm-heading-color);
+  padding: 0.36rem 0.58rem;
+}
+
+.heroTitle {
+  margin: 0.7rem 0 0.35rem;
+  font-size: clamp(1.7rem, 3.2vw, 2.45rem);
+  line-height: 1;
+}
+
+.heroDescription {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.tagRow,
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagRow {
+  margin-top: 0.9rem;
+}
+
+.tag {
+  background: rgba(6, 182, 212, 0.08);
+  color: var(--ifm-color-primary);
+  padding: 0.3rem 0.52rem;
+}
+
+.heroActions {
+  margin-top: 0.95rem;
+}
+
+.heroLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border: 1px solid var(--doc-border-soft);
+  border-radius: 999px;
+  background: var(--doc-surface-card);
+  color: var(--ifm-heading-color);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0 0.86rem;
+  text-decoration: none;
+}
+
+.heroLink:hover {
+  border-color: var(--doc-border-strong);
+  background: var(--doc-brand-gradient-soft);
+  color: var(--ifm-heading-color);
+}
+
+:global([data-theme="dark"]) .tag {
+  background: rgba(34, 211, 238, 0.14);
+}
+
+:global([data-theme="dark"]) .heroLink {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}

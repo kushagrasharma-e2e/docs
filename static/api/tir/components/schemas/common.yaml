@@ -1,0 +1,14 @@
+Error:
+  type: object
+  x-tags:
+    - Training Jobs
+  properties:
+    message:
+      type: string
+      example: Invalid request.
+    requestId:
+      type: string
+      example: req_01HXYZ987TIR
+  required:
+    - message
+    - requestId

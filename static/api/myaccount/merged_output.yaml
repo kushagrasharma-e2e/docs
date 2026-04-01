@@ -1,0 +1,103 @@
+/v1/nodes:
+  get:
+    tags:
+      - Nodes
+    summary: List nodes
+    operationId: listNodes
+    responses:
+      "200":
+        description: A paginated list of nodes.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/NodeListResponse
+  post:
+    tags:
+      - Nodes
+    summary: Create a node
+    operationId: createNode
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: ./openapi.yaml#/components/schemas/NodeCreateRequest
+    responses:
+      "201":
+        description: The node was created.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/Node
+      "400":
+        description: Invalid request.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/Error
+
+/v1/nodes/{nodeId}:
+  parameters:
+    - name: nodeId
+      in: path
+      required: true
+      schema:
+        type: string
+  get:
+    tags:
+      - Nodes
+    summary: Get a node
+    operationId: getNode
+    responses:
+      "200":
+        description: Node details.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/Node
+      "404":
+        description: The node was not found.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/Error
+  delete:
+    tags:
+      - Nodes
+    summary: Delete a node
+    operationId: deleteNode
+    responses:
+      "204":
+        description: The node was deleted.
+      "404":
+        description: The node was not found.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/Error
+/v1/load-balancers:
+  get:
+    tags:
+      - Load Balancers
+    summary: List load balancers
+    operationId: listLoadBalancers
+    responses:
+      "200":
+        description: A list of load balancers.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/LoadBalancerListResponse
+/v1/invoices:
+  get:
+    tags:
+      - Invoices
+    summary: List invoices
+    operationId: listInvoices
+    responses:
+      "200":
+        description: A list of invoices.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/InvoiceListResponse

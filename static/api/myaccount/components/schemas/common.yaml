@@ -1,0 +1,14 @@
+Error:
+  type: object
+  x-tags:
+    - Nodes
+  properties:
+    message:
+      type: string
+      example: Resource not found.
+    requestId:
+      type: string
+      example: req_01HXYZ123ABC
+  required:
+    - message
+    - requestId

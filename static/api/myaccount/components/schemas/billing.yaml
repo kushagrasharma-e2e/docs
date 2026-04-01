@@ -1,0 +1,43 @@
+Invoice:
+  type: object
+  x-tags:
+    - Invoices
+  properties:
+    id:
+      type: string
+      example: inv_123
+    billingMonth:
+      type: string
+      example: 2026-03
+    totalAmount:
+      type: number
+      format: float
+      example: 1249.5
+    currency:
+      type: string
+      example: INR
+    status:
+      type: string
+      example: paid
+  required:
+    - id
+    - billingMonth
+    - totalAmount
+    - currency
+    - status
+
+InvoiceListResponse:
+  type: object
+  x-tags:
+    - Invoices
+  properties:
+    items:
+      type: array
+      items:
+        $ref: "#/Invoice"
+    total:
+      type: integer
+      example: 12
+  required:
+    - items
+    - total

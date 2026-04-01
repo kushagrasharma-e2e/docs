@@ -1,0 +1,242 @@
+openapi: 3.0.3
+info:
+  title: TIR API
+  version: 1.0.0
+  description: |
+    API reference for TIR workflows on E2E Networks.
+servers:
+  - url: 'https://api.e2enetworks.com/tir'
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Datasets
+    description: Manage dataset metadata and catalog entries.
+  - name: Training Jobs
+    description: Submit and monitor training workloads.
+  - name: Model Endpoints
+    description: Deploy and inspect inference endpoints.
+x-tagGroups:
+  - name: Data
+    tags:
+      - Datasets
+  - name: Training
+    tags:
+      - Training Jobs
+  - name: Inference
+    tags:
+      - Model Endpoints
+paths:
+  /v1/datasets:
+    get:
+      tags:
+        - Datasets
+      summary: List datasets
+      operationId: listDatasets
+      responses:
+        '200':
+          description: A list of datasets.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DatasetListResponse'
+  /v1/training/jobs:
+    get:
+      tags:
+        - Training Jobs
+      summary: List training jobs
+      operationId: listTrainingJobs
+      responses:
+        '200':
+          description: A list of training jobs.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrainingJobListResponse'
+    post:
+      tags:
+        - Training Jobs
+      summary: Create a training job
+      operationId: createTrainingJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TrainingJobCreateRequest'
+      responses:
+        '201':
+          description: The training job was created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrainingJob'
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /v1/model-endpoints:
+    get:
+      tags:
+        - Model Endpoints
+      summary: List model endpoints
+      operationId: listModelEndpoints
+      responses:
+        '200':
+          description: A list of model endpoints.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelEndpointListResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key issued for TIR API access.
+  schemas:
+    Error:
+      type: object
+      x-tags:
+        - Training Jobs
+      properties:
+        message:
+          type: string
+          example: Invalid request.
+        requestId:
+          type: string
+          example: req_01HXYZ987TIR
+      required:
+        - message
+        - requestId
+    Dataset:
+      type: object
+      x-tags:
+        - Datasets
+      properties:
+        id:
+          type: string
+          example: ds_123
+        name:
+          type: string
+          example: instruction-tuning-corpus
+        format:
+          type: string
+          example: parquet
+        status:
+          type: string
+          example: ready
+      required:
+        - id
+        - name
+        - format
+        - status
+    DatasetListResponse:
+      type: object
+      x-tags:
+        - Datasets
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Dataset'
+        total:
+          type: integer
+          example: 4
+      required:
+        - items
+        - total
+    TrainingJob:
+      type: object
+      x-tags:
+        - Training Jobs
+      properties:
+        id:
+          type: string
+          example: job_123
+        model:
+          type: string
+          example: llama-3-8b
+        datasetId:
+          type: string
+          example: ds_123
+        status:
+          type: string
+          example: running
+      required:
+        - id
+        - model
+        - datasetId
+        - status
+    TrainingJobCreateRequest:
+      type: object
+      x-tags:
+        - Training Jobs
+      properties:
+        model:
+          type: string
+          example: llama-3-8b
+        datasetId:
+          type: string
+          example: ds_123
+        instanceType:
+          type: string
+          example: a100-80gb
+      required:
+        - model
+        - datasetId
+        - instanceType
+    TrainingJobListResponse:
+      type: object
+      x-tags:
+        - Training Jobs
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/TrainingJob'
+        total:
+          type: integer
+          example: 3
+      required:
+        - items
+        - total
+    ModelEndpoint:
+      type: object
+      x-tags:
+        - Model Endpoints
+      properties:
+        id:
+          type: string
+          example: endpoint_123
+        model:
+          type: string
+          example: llama-3-8b-instruct
+        status:
+          type: string
+          example: active
+        publicUrl:
+          type: string
+          example: 'https://tir.e2enetworks.com/endpoints/endpoint_123'
+      required:
+        - id
+        - model
+        - status
+        - publicUrl
+    ModelEndpointListResponse:
+      type: object
+      x-tags:
+        - Model Endpoints
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/ModelEndpoint'
+        total:
+          type: integer
+          example: 2
+      required:
+        - items
+        - total

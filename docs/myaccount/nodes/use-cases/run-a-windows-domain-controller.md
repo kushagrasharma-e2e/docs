@@ -1,3 +1,8 @@
+---
+title: Run A Windows Domain Controller
+description: Run a Windows domain controller on MyAccount Nodes
+---
+
 # Run A Windows Domain Controller
 
 This use case is for Windows administrators who want to use an E2E node as the base for an Active Directory domain controller.

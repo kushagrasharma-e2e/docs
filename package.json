@@ -4,6 +4,9 @@
   "private": true,
   "description": "Official documentation for E2E Networks.",
   "scripts": {
+    "api:build": "npm run api:build:myaccount && npm run api:build:tir",
+    "api:build:myaccount": "sh ./static/api/myaccount/merge_and_bundle.sh",
+    "api:build:tir": "sh ./static/api/tir/merge_and_bundle.sh",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -16,29 +19,12 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.5.2",
-    "@docusaurus/preset-classic": "^3.5.2",
-    "@mdx-js/react": "^3.0.0",
-    "@plausible-analytics/tracker": "^0.4.4",
-    "@radix-ui/react-select": "^2.2.6",
-    "@radix-ui/react-slot": "^1.2.4",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.575.0",
-    "prism-react-renderer": "^2.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.5.0"
-  },
-  "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/tsconfig": "3.9.2",
-    "@docusaurus/types": "3.9.2",
-    "@tailwindcss/postcss": "^4.2.1",
-    "autoprefixer": "^10.4.27",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.19",
-    "typescript": "~5.6.2"
+    "@docusaurus/plugin-content-docs": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
+    "docusaurus": "^1.14.7",
+    "lucide-react": "^1.7.0",
+    "prism-react-renderer": "^2.4.1"
   },
   "browserslist": {
     "production": [

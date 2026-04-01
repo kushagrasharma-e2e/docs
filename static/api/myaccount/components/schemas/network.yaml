@@ -1,0 +1,38 @@
+LoadBalancer:
+  type: object
+  x-tags:
+    - Load Balancers
+  properties:
+    id:
+      type: string
+      example: lb_123
+    name:
+      type: string
+      example: public-web
+    ipAddress:
+      type: string
+      example: 203.0.113.10
+    status:
+      type: string
+      example: active
+  required:
+    - id
+    - name
+    - ipAddress
+    - status
+
+LoadBalancerListResponse:
+  type: object
+  x-tags:
+    - Load Balancers
+  properties:
+    items:
+      type: array
+      items:
+        $ref: "#/LoadBalancer"
+    total:
+      type: integer
+      example: 1
+  required:
+    - items
+    - total

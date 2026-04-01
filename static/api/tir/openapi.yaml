@@ -1,0 +1,50 @@
+openapi: 3.0.3
+info:
+  title: TIR API
+  version: 1.0.0
+  description: |
+    API reference for TIR workflows on E2E Networks.
+servers:
+  - url: https://api.e2enetworks.com/tir
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Datasets
+    description: Manage dataset metadata and catalog entries.
+  - name: Training Jobs
+    description: Submit and monitor training workloads.
+  - name: Model Endpoints
+    description: Deploy and inspect inference endpoints.
+x-tagGroups:
+  - name: Data
+    tags:
+      - Datasets
+  - name: Training
+    tags:
+      - Training Jobs
+  - name: Inference
+    tags:
+      - Model Endpoints
+paths:
+  $ref: "./merged_output.yaml"
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      $ref: ./components/securitySchemes/api-key.yaml
+  schemas:
+    Error:
+      $ref: ./components/schemas/common.yaml#/Error
+    Dataset:
+      $ref: ./components/schemas/data.yaml#/Dataset
+    DatasetListResponse:
+      $ref: ./components/schemas/data.yaml#/DatasetListResponse
+    TrainingJob:
+      $ref: ./components/schemas/training.yaml#/TrainingJob
+    TrainingJobCreateRequest:
+      $ref: ./components/schemas/training.yaml#/TrainingJobCreateRequest
+    TrainingJobListResponse:
+      $ref: ./components/schemas/training.yaml#/TrainingJobListResponse
+    ModelEndpoint:
+      $ref: ./components/schemas/inference.yaml#/ModelEndpoint
+    ModelEndpointListResponse:
+      $ref: ./components/schemas/inference.yaml#/ModelEndpointListResponse

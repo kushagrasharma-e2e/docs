@@ -1,0 +1,13 @@
+/v1/invoices:
+  get:
+    tags:
+      - Invoices
+    summary: List invoices
+    operationId: listInvoices
+    responses:
+      "200":
+        description: A list of invoices.
+        content:
+          application/json:
+            schema:
+              $ref: ./openapi.yaml#/components/schemas/InvoiceListResponse

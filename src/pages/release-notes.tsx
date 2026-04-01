@@ -1,10 +1,9 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
-import { Check, ChevronDown } from "lucide-react";
 
 import tirData from "../../static/release-notes/tir.json";
 import myaccountData from "../../static/release-notes/myaccount.json";
@@ -97,87 +96,35 @@ function Badge({
   );
 }
 
-function FilterSelect({
+function FilterField({
   id,
+  label,
   value,
-  onValueChange,
+  onChange,
   items,
 }: {
   id: string;
+  label: string;
   value: string;
-  onValueChange: (value: string) => void;
+  onChange: (value: string) => void;
   items: Array<{ label: string; value: string }>;
 }) {
-  const [open, setOpen] = useState(false);
-  const rootRef = React.useRef<HTMLDivElement | null>(null);
-  const currentItem = items.find((item) => item.value === value) ?? items[0];
-
-  useEffect(() => {
-    if (!open) {
-      return;
-    }
-
-    const handlePointerDown = (event: MouseEvent) => {
-      if (rootRef.current?.contains(event.target as Node)) {
-        return;
-      }
-
-      setOpen(false);
-    };
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handlePointerDown);
-    document.addEventListener("keydown", handleEscape);
-
-    return () => {
-      document.removeEventListener("mousedown", handlePointerDown);
-      document.removeEventListener("keydown", handleEscape);
-    };
-  }, [open]);
-
   return (
-    <div ref={rootRef} className={styles.filterMenu}>
-      <button
+    <label className={styles.filterField} htmlFor={id}>
+      <span>{label}</span>
+      <select
         id={id}
-        type="button"
-        className={clsx(styles.selectTrigger, open && styles.selectTriggerOpen)}
-        aria-haspopup="listbox"
-        aria-expanded={open}
-        onClick={() => setOpen((current) => !current)}
+        className={styles.select}
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
       >
-        <span className={styles.selectValue}>{currentItem?.label}</span>
-        <ChevronDown className={clsx(styles.selectChevron, open && styles.selectChevronOpen)} />
-      </button>
-
-      {open ? (
-        <div className={styles.selectContent} role="listbox" aria-labelledby={id}>
         {items.map((item) => (
-          <button
-            key={item.value}
-            type="button"
-            role="option"
-            aria-selected={item.value === value}
-            className={clsx(
-              styles.selectItem,
-              item.value === value && styles.selectItemActive
-            )}
-            onClick={() => {
-              onValueChange(item.value);
-              setOpen(false);
-            }}
-          >
-            <span>{item.label}</span>
-            {item.value === value ? <Check className={styles.selectCheck} /> : null}
-          </button>
+          <option key={item.value} value={item.value}>
+            {item.label}
+          </option>
         ))}
-        </div>
-      ) : null}
-    </div>
+      </select>
+    </label>
   );
 }
 
@@ -258,6 +205,7 @@ export default function ReleaseNotes(): ReactNode {
     if (selectedProduct !== "All" && !filteredProducts.includes(selectedProduct)) {
       setSelectedProduct("All");
     }
+
     setCurrentPage(1);
   }, [selectedPlatform, filteredProducts, selectedProduct]);
 
@@ -285,6 +233,15 @@ export default function ReleaseNotes(): ReactNode {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleResetFilters = () => {
+    setSelectedPlatform("All");
+    setSelectedProduct("All");
+    setItemsPerPage(10);
+    setCurrentPage(1);
+  };
+
+  const hasActiveFilters =
+    selectedPlatform !== "All" || selectedProduct !== "All" || itemsPerPage !== 10;
   const start = filteredData.length === 0 ? 0 : (currentPage - 1) * itemsPerPage + 1;
   const end = Math.min(currentPage * itemsPerPage, filteredData.length);
 
@@ -297,68 +254,65 @@ export default function ReleaseNotes(): ReactNode {
         <div className="container">
           <section className={styles.hero}>
             <div className={styles.heroCopy}>
-              <span className={styles.kicker}>Shipping Velocity</span>
+              <span className={styles.kicker}>Recent Changes</span>
               <Heading as="h1" className={styles.pageTitle}>
                 Release Notes
               </Heading>
               <p className={styles.pageSubtitle}>
-                Track feature launches, improvements, and product changes across E2E Networks in a layout that is easier to scan and filter.
+                Track launches, improvements, and product changes across E2E Networks
+                in a format that is easier to scan, filter, and revisit.
               </p>
             </div>
 
-            {/* <div className={styles.heroSummary}>
+            <div className={styles.heroSummary}>
               <div>
-                <span className={styles.summaryLabel}>Platforms covered</span>
+                <span className={styles.summaryLabel}>Platforms</span>
                 <p>MyAccount and TIR updates in one stream.</p>
               </div>
               <div>
-                <span className={styles.summaryLabel}>Current selection</span>
+                <span className={styles.summaryLabel}>Current view</span>
                 <p>
                   {selectedPlatform === "All" ? "All platforms" : selectedPlatform}
                   {" · "}
                   {selectedProduct === "All" ? "All products" : selectedProduct}
                 </p>
               </div>
-            </div> */}
+            </div>
           </section>
 
           <section className={styles.filtersPanel}>
-            <div className={styles.filterField}>
-              <label htmlFor="platform-filter">Platform</label>
-              <FilterSelect
+            <div className={styles.filtersGrid}>
+              <FilterField
                 id="platform-filter"
+                label="Platform"
                 value={selectedPlatform}
-                onValueChange={setSelectedPlatform}
+                onChange={setSelectedPlatform}
                 items={[
-                  { label: "All Platforms", value: "All" },
+                  { label: "All platforms", value: "All" },
                   { label: "MyAccount", value: "MyAccount" },
                   { label: "TIR", value: "TIR" },
                 ]}
               />
-            </div>
 
-            <div className={styles.filterField}>
-              <label htmlFor="product-filter">Product</label>
-              <FilterSelect
+              <FilterField
                 id="product-filter"
+                label="Product"
                 value={selectedProduct}
-                onValueChange={setSelectedProduct}
+                onChange={setSelectedProduct}
                 items={[
-                  { label: "All Products", value: "All" },
+                  { label: "All products", value: "All" },
                   ...filteredProducts.map((product) => ({
                     label: product,
                     value: product,
                   })),
                 ]}
               />
-            </div>
 
-            <div className={styles.filterField}>
-              <label htmlFor="per-page-filter">Per page</label>
-              <FilterSelect
+              <FilterField
                 id="per-page-filter"
+                label="Per page"
                 value={String(itemsPerPage)}
-                onValueChange={(value) => {
+                onChange={(value) => {
                   setItemsPerPage(Number(value));
                   setCurrentPage(1);
                 }}
@@ -367,6 +321,15 @@ export default function ReleaseNotes(): ReactNode {
                   value: String(count),
                 }))}
               />
+            </div>
+
+            <div className={styles.filtersMeta}>
+              <p>Use filters to narrow by platform or product when you are checking whether a recent change may explain what you are seeing.</p>
+              {hasActiveFilters ? (
+                <button type="button" className={styles.resetButton} onClick={handleResetFilters}>
+                  Reset filters
+                </button>
+              ) : null}
             </div>
           </section>
 
@@ -390,7 +353,10 @@ export default function ReleaseNotes(): ReactNode {
             ) : (
               <div className={styles.emptyState}>
                 <Heading as="h2">No release notes match those filters.</Heading>
-                <p>Try broadening the platform or product selection to see more updates.</p>
+                <p>Broaden the platform or product filters to see more updates.</p>
+                <button type="button" className={styles.resetButton} onClick={handleResetFilters}>
+                  Show all updates
+                </button>
               </div>
             )}
 

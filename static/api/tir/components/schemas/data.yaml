@@ -1,0 +1,38 @@
+Dataset:
+  type: object
+  x-tags:
+    - Datasets
+  properties:
+    id:
+      type: string
+      example: ds_123
+    name:
+      type: string
+      example: instruction-tuning-corpus
+    format:
+      type: string
+      example: parquet
+    status:
+      type: string
+      example: ready
+  required:
+    - id
+    - name
+    - format
+    - status
+
+DatasetListResponse:
+  type: object
+  x-tags:
+    - Datasets
+  properties:
+    items:
+      type: array
+      items:
+        $ref: "#/Dataset"
+    total:
+      type: integer
+      example: 4
+  required:
+    - items
+    - total

@@ -1,3 +1,8 @@
+---
+title: Daily Operations
+description: Day-2 operational tasks for MyAccount Nodes
+---
+
 # Daily Operations
 
 This guide covers the actions you are most likely to use after the node is already live.

@@ -1,3 +1,8 @@
+---
+title: Prerequisites
+description: Prerequisites for creating and operating MyAccount Nodes
+---
+
 # Prerequisites
 
 This guide helps you avoid the common "launch succeeded, but I still can't use the node" failure mode.

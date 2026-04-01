@@ -1,3 +1,8 @@
+---
+title: Custom Images And Migration
+description: Use custom images and migration workflows for MyAccount Nodes
+---
+
 # Custom Images And Migration
 
 This guide helps you bring an existing machine into E2E instead of rebuilding it by hand.

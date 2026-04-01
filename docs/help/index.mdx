@@ -1,43 +1,83 @@
 ---
-title: Help
-description: Help and support guides across the documentation site
+title: Support
+description: Support and troubleshooting entry points across the documentation site
 ---
 
 import Link from "@docusaurus/Link";
 
-# Help
+# Support
 
 <div className="doc-hub">
   <div className="doc-hub__hero">
-    <span className="doc-hub__eyebrow">Support Hub</span>
-    <h2>Find support-oriented guides without overloading the primary product navigation.</h2>
-    <p>
-      Help is the home for support flows, migrations, and troubleshooting content
-      that users may need alongside MyAccount or TIR, but not as part of the
-      main product-first header.
-    </p>
+    <span className="doc-hub__eyebrow">Support Lane</span>
+    <h2>Use Support when the workflow is blocked or needs a clearer escalation path.</h2>
+    <p>Support is where troubleshooting handoff, migration help, and product support routes live. Come here when the job is operational or time-sensitive, not when you need a standard product walkthrough.</p>
   </div>
 
-  <div className="doc-hub__grid">
-    <Link className="doc-hub__card" to="/docs/help/godaddy">
-      <h3>DNS Migration to E2E</h3>
-      <p>Understand what changes when you move DNS management from GoDaddy to E2E.</p>
+  <div className="doc-hub__actions">
+    <Link className="doc-hub__action" to="/docs/help/godaddy">
+      <h3>DNS migration overview</h3>
+      <p>Use this when you need to understand the migration shape before touching records, cutover, or validation steps.</p>
       <span className="doc-hub__link">Open migration overview</span>
     </Link>
-    <Link className="doc-hub__card" to="/docs/help/godaddy/migrate">
-      <h3>Migrate from GoDaddy</h3>
-      <p>Use the step-by-step task guide when you are ready to perform the migration.</p>
+    <Link className="doc-hub__action" to="/docs/help/godaddy/migrate">
+      <h3>Run the migration</h3>
+      <p>Use the step-by-step guide when you are ready to execute the GoDaddy to E2E migration flow.</p>
       <span className="doc-hub__link">Open migration guide</span>
     </Link>
-    <Link className="doc-hub__card" to="/docs/help/godaddy/troubleshoot">
-      <h3>Troubleshoot DNS Migration</h3>
-      <p>Use the troubleshooting page when a record, cutover, or validation step fails.</p>
-      <span className="doc-hub__link">Open troubleshooting</span>
-    </Link>
-    <Link className="doc-hub__card" to="/release-notes">
-      <h3>Release Notes</h3>
-      <p>Keep product updates close when support issues may be tied to recent platform changes.</p>
+    <Link className="doc-hub__action" to="/release-notes">
+      <h3>Check release notes</h3>
+      <p>Use this when the issue may line up with a recent product or platform change and you need to confirm what moved.</p>
       <span className="doc-hub__link">Open release notes</span>
     </Link>
+    <Link className="doc-hub__action" to="/docs/myaccount/support">
+      <h3>Product support routes</h3>
+      <p>Use MyAccount support paths when the issue needs product-specific support categories such as abuse, SOC, priority, or sales.</p>
+      <span className="doc-hub__link">Open product support</span>
+    </Link>
+  </div>
+
+  <div className="doc-hub__columns">
+    <div className="doc-hub__section">
+      <div className="doc-hub__section-header">
+        <h2>Use Support when</h2>
+        <p>These are the most common reasons to leave the normal Docs flow.</p>
+      </div>
+      <ul className="doc-hub__list">
+        <li>
+          <strong>A migration or cutover is in progress</strong>
+          The work is operational and timing-sensitive, so a support-oriented path is safer than browsing generic docs.
+        </li>
+        <li>
+          <strong>You think a recent change may explain the issue</strong>
+          Check Release Notes before assuming the current behavior is a regression or misconfiguration.
+        </li>
+        <li>
+          <strong>You need escalation, not just a guide</strong>
+          Move into product support when the next step is human assistance, policy review, or a formal support channel.
+        </li>
+      </ul>
+    </div>
+
+    <div className="doc-hub__callout">
+      <div className="doc-hub__section-header">
+        <h2>Keep nearby</h2>
+        <p>These routes work well alongside the Support lane.</p>
+      </div>
+      <ul className="doc-hub__list">
+        <li>
+          <strong><Link to="/docs/intro">Docs</Link></strong>
+          Return to the structured product docs when the issue is no longer blocked and you need the normal workflow path again.
+        </li>
+        <li>
+          <strong><Link to="/api">API</Link></strong>
+          Switch to the API lane when troubleshooting requires endpoint-level auth, schema, or request validation detail.
+        </li>
+        <li>
+          <strong><Link to="/docs/tir/troubleshooting/support-and-release-notes">TIR support handoff</Link></strong>
+          Use the curated TIR support page when the issue is inside the TIR workflow and may need live-manual continuation.
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

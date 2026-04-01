@@ -1,3 +1,8 @@
+---
+title: Encryption
+description: Encryption options and practices for MyAccount Nodes
+---
+
 # Encryption
 
 This guide helps you decide when to enable encryption and what that choice changes later.

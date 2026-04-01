@@ -1,3 +1,8 @@
+---
+title: Monitoring And Alerts
+description: Monitor MyAccount Nodes and set up operational alerts
+---
+
 # Monitoring And Alerts
 
 This guide helps you move from passive node ownership to active operational visibility.

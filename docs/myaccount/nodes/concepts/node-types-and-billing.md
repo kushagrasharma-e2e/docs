@@ -1,3 +1,8 @@
+---
+title: Node Types And Billing
+description: Compare node types and billing models in MyAccount Nodes
+---
+
 # Node Types And Billing
 
 This page helps you choose the right launch path and avoid billing surprises.

@@ -1,3 +1,8 @@
+---
+title: Create Your First Node
+description: Create your first MyAccount node from the console
+---
+
 # Create Your First Node
 
 This guide helps you launch a usable node from the MyAccount portal without getting lost in optional features.

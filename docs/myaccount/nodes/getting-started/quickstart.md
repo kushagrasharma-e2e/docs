@@ -1,3 +1,8 @@
+---
+title: Quickstart
+description: Launch and connect to your first MyAccount node
+---
+
 # Quickstart
 
 This guide gets you from zero to a usable node as quickly as possible.
