@@ -2,14 +2,13 @@
 
 This repository contains the official E2E Networks documentation site, built with [Docusaurus 3](https://docusaurus.io/), React 19, and TypeScript.
 
-The current experience is organized around four top-level content lanes: `Docs`, `API`, `Release Notes`, and `Support`. Inside the Docs lane, `MyAccount` and `TIR` remain the two primary product hubs.
+The current experience is organized around five top-level content lanes: `MyAccount`, `TIR`, `API`, `Release Notes`, and `Support`. The product docs are centered on `MyAccount` and `TIR`.
 
 ## Current Structure
 
 ```text
 .
 ├── docs/                         # Documentation content
-│   ├── intro.mdx                 # Cross-product docs hub
 │   ├── help/                     # Support and troubleshooting content
 │   ├── myaccount/                # MyAccount platform docs
 │   ├── tir/                      # TIR platform docs
@@ -48,9 +47,9 @@ The current experience is organized around four top-level content lanes: `Docs`,
 
 ## Navigation Model
 
-- The homepage routes users first into `Docs`, `API`, `Release Notes`, or `Support`.
-- The Docs lane then routes users into `MyAccount` or `TIR`.
-- Product depth inside Docs is handled primarily through `sidebars.ts`.
+- The homepage routes users first into `MyAccount`, `TIR`, `API`, `Release Notes`, or `Support`.
+- The top-level routes now point directly to `MyAccount` and `TIR`.
+- Product depth is handled primarily through `sidebars.ts`.
 - Release notes are rendered from `static/release-notes/myaccount.json` and `static/release-notes/tir.json`.
 
 ## Local Development
@@ -87,5 +86,5 @@ The workflow:
 
 1. Update prose docs under `docs/` and keep the structure aligned with `sidebars.ts` and `docusaurus.config.ts`.
 2. Prefer shared tokens and patterns from `src/css/custom.css` over one-off styling.
-3. Preserve the lane-first information architecture: `Docs`, `API`, `Release Notes`, and `Support` are the global routes, while `MyAccount` and `TIR` remain the primary product hubs inside Docs.
+3. Preserve the lane-first information architecture: `MyAccount`, `TIR`, `API`, `Release Notes`, and `Support` are the global routes.
 4. Run `npm run typecheck` and `npm run build` before shipping meaningful changes.

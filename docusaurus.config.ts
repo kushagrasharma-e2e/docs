@@ -47,6 +47,10 @@ const config: Config = {
 
   onBrokenLinks: "warn",
 
+  markdown: {
+    format: "detect",
+  },
+
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -57,6 +61,9 @@ const config: Config = {
       "classic",
       {
         docs: {
+          // Mount docs directly under the site baseUrl so links resolve to
+          // /docs/... instead of /docs/docs/...
+          routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -126,14 +133,22 @@ const config: Config = {
       items: [
         {
           type: "doc",
-          docId: "intro",
+          docId: "myaccount/index",
           position: "left",
-          label: "Docs",
-          activeBaseRegex: "^/docs(?:/intro|/myaccount|/tir)?(?:/.*)?$",
+          label: "MyAccount",
+          activeBaseRegex: "^/docs/myaccount(?:/.*)?$",
+        },
+        {
+          type: "doc",
+          docId: "tir/index",
+          position: "left",
+          label: "TIR",
+          activeBaseRegex: "^/docs/tir(?:/.*)?$",
         },
         {
           position: "left",
           label: "API",
+          className: "navbar-api-dropdown",
           activeBaseRegex: "^/api(?:/.*)?$",
           items: [
             {

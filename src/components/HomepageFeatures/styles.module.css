@@ -1,33 +1,35 @@
 .features {
-  padding: 0;
+  padding: 0.55rem 0 1.15rem;
 }
 
-.productBand,
-.taskBand,
-.utilityBand {
+.featureShell {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--doc-border-soft);
-  border-radius: 22px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(248, 250, 252, 0.98));
   box-shadow: var(--doc-elevation-1);
-  padding: clamp(1rem, 1.7vw, 1.35rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
 }
 
-.productBand {
-  background: var(--doc-surface-panel);
-}
-
-.taskBand {
-  margin-top: 0.8rem;
-  background: var(--doc-surface-card);
-}
-
-.utilityBand {
-  margin-top: 0.8rem;
-  background: linear-gradient(180deg, rgba(6, 182, 212, 0.06), rgba(255, 255, 255, 0.9));
+.featureShell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.08), transparent 28%);
 }
 
 .bandHeader,
-.utilityHeader {
-  max-width: 46rem;
+.routeGrid {
+  position: relative;
+  z-index: 1;
+}
+
+.bandHeader {
+  max-width: 48rem;
 }
 
 .kicker,
@@ -47,64 +49,39 @@
   padding: 0.36rem 0.58rem;
 }
 
-.bandHeader h2,
-.utilityHeader h2 {
-  margin: 0.62rem 0 0.42rem;
-  font-size: clamp(1.18rem, 1.8vw, 1.48rem);
+.bandHeader h2 {
+  margin: 0.78rem 0 0.5rem;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
   line-height: 1.08;
   text-wrap: balance;
 }
 
-.bandHeader p,
-.utilityHeader p {
+.bandHeader p {
   margin: 0;
   color: var(--ifm-font-color-secondary);
-  font-size: 0.88rem;
-  line-height: 1.55;
+  font-size: 0.94rem;
+  line-height: 1.6;
 }
 
-.productGrid,
-.taskGrid,
-.utilityGrid {
+.routeGrid {
   display: grid;
-  gap: 0.65rem;
-  margin-top: 0.9rem;
-}
-
-.productGrid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.taskGrid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.utilityGrid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 0.62rem;
+  gap: 0.7rem;
   min-height: 100%;
   border: 1px solid var(--doc-border-soft);
-  border-radius: 18px;
+  border-radius: 22px;
   background: var(--doc-surface-card);
   color: inherit;
-  padding: 0.95rem;
+  padding: 1rem;
   text-decoration: none;
   box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
-}
-
-.productGrid .card {
-  padding: 1.1rem;
-  background: var(--doc-surface-card);
-}
-
-.taskGrid .card,
-.utilityGrid .card {
-  background: var(--doc-surface-card);
 }
 
 .card:hover {
@@ -115,81 +92,142 @@
   box-shadow: 0 18px 28px rgba(15, 23, 42, 0.08);
 }
 
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
 .cardEyebrow {
-  width: fit-content;
   background: rgba(6, 182, 212, 0.08);
   color: var(--ifm-color-primary);
   padding: 0.28rem 0.46rem;
 }
 
-.card h3 {
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.25;
-  text-wrap: balance;
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--ifm-color-primary);
 }
 
-.productGrid .card h3 {
-  font-size: 1.08rem;
+.card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  text-wrap: balance;
 }
 
 .card p {
   margin: 0;
   color: var(--ifm-font-color-secondary);
-  font-size: 0.84rem;
-  line-height: 1.5;
-}
-
-.productGrid .card p {
   font-size: 0.88rem;
+  line-height: 1.55;
 }
 
-.card span:last-child {
+.cardChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
   margin-top: auto;
+}
+
+.cardChip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  background: var(--doc-surface-muted);
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0 0.6rem;
+}
+
+.cardLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--ifm-color-primary);
   font-size: 0.8rem;
   font-weight: 800;
 }
 
-.linkRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 0.85rem;
+.cardMyAccount,
+.cardTir,
+.cardApi,
+.cardSupport {
+  min-height: 220px;
 }
 
-.inlineLink {
+.footerRow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--doc-border-soft);
+  padding-top: 1rem;
+}
+
+.footerRow p {
+  margin: 0.45rem 0 0;
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.footerKicker {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 38px;
+  border-radius: 999px;
+  background: var(--doc-surface-muted);
+  color: var(--ifm-heading-color);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.34rem 0.56rem;
+  text-transform: uppercase;
+}
+
+.footerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 40px;
   border-radius: 999px;
   border: 1px solid var(--doc-border-soft);
   background: var(--doc-surface-card);
   color: var(--ifm-heading-color);
   font-size: 0.82rem;
   font-weight: 800;
-  padding: 0 0.85rem;
+  padding: 0 0.9rem;
   text-decoration: none;
+  white-space: nowrap;
 }
 
-.inlineLink:hover {
-  color: var(--ifm-heading-color);
+.footerLink:hover {
   border-color: var(--doc-border-strong);
   background: var(--doc-brand-gradient-soft);
+  color: var(--ifm-heading-color);
 }
 
-:global([data-theme="dark"]) .utilityBand {
-  background: linear-gradient(180deg, rgba(34, 211, 238, 0.08), rgba(15, 23, 42, 0.92));
+:global([data-theme="dark"]) .featureShell {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.98));
 }
 
-:global([data-theme="dark"]) .card,
-:global([data-theme="dark"]) .inlineLink {
+:global([data-theme="dark"]) .card {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 }
 
-:global([data-theme="dark"]) .card:hover,
-:global([data-theme="dark"]) .inlineLink:hover {
+:global([data-theme="dark"]) .card:hover {
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.3);
 }
 
@@ -197,26 +235,33 @@
   background: rgba(34, 211, 238, 0.14);
 }
 
+:global([data-theme="dark"]) .footerLink {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+:global([data-theme="dark"]) .footerLink:hover {
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 996px) {
-  .productGrid,
-  .taskGrid,
-  .utilityGrid {
+  .routeGrid {
     grid-template-columns: 1fr;
   }
 
-  .productBand,
-  .taskBand,
-  .utilityBand {
-    border-radius: 18px;
+  .cardMyAccount,
+  .cardTir,
+  .cardApi,
+  .cardSupport {
+    min-height: unset;
   }
-}
 
-@media (max-width: 640px) {
-  .linkRow {
+  .footerRow {
+    align-items: stretch;
     flex-direction: column;
   }
 
-  .inlineLink {
+  .footerLink {
     width: 100%;
+    justify-content: center;
   }
 }

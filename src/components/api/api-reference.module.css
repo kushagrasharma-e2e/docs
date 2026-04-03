@@ -15,6 +15,14 @@
   padding: clamp(1rem, 1.8vw, 1.35rem);
 }
 
+.heroCardCompact {
+  border: 1px solid var(--doc-border-soft);
+  border-radius: 22px;
+  background: var(--doc-surface-panel);
+  box-shadow: var(--doc-elevation-1);
+  padding: clamp(0.82rem, 1.4vw, 1.05rem);
+}
+
 .eyebrow,
 .tag {
   display: inline-flex;
@@ -38,12 +46,23 @@
   line-height: 1;
 }
 
+.heroCardCompact .heroTitle {
+  margin-top: 0.55rem;
+  font-size: clamp(1.55rem, 2.8vw, 2.1rem);
+}
+
 .heroDescription {
   margin: 0;
   max-width: 42rem;
   color: var(--ifm-font-color-secondary);
   font-size: 0.92rem;
   line-height: 1.58;
+}
+
+.heroCardCompact .heroDescription {
+  max-width: 34rem;
+  font-size: 0.88rem;
+  line-height: 1.52;
 }
 
 .tagRow,
@@ -55,6 +74,11 @@
 
 .tagRow {
   margin-top: 0.9rem;
+}
+
+.heroCardCompact .tagRow,
+.heroCardCompact .heroActions {
+  display: none;
 }
 
 .tag {

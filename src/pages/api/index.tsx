@@ -52,7 +52,7 @@ export default function ApiIndexPage() {
                   </li>
                   <li>
                     <strong>You already know the product area</strong>
-                    Switch back to Docs if you need conceptual guidance, task sequencing, or troubleshooting context.
+                    Switch back to MyAccount or TIR docs if you need conceptual guidance, task sequencing, or troubleshooting context.
                   </li>
                 </ul>
               </div>
@@ -64,8 +64,12 @@ export default function ApiIndexPage() {
                 </div>
                 <ul className="doc-hub__list">
                   <li>
-                    <strong><Link to="/docs/intro">Docs</Link></strong>
-                    Return to Docs for guided product flows, quickstarts, and product-area navigation.
+                    <strong><Link to="/docs/myaccount">MyAccount docs</Link></strong>
+                    Return to MyAccount for guided product flows, quickstarts, and product-area navigation.
+                  </li>
+                  <li>
+                    <strong><Link to="/docs/tir">TIR docs</Link></strong>
+                    Return to TIR when the work shifts into AI workflow guidance and platform navigation.
                   </li>
                   <li>
                     <strong><Link to="/release-notes">Release Notes</Link></strong>

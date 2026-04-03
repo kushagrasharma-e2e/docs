@@ -16,6 +16,7 @@ interface ApiReferencePageProps {
   specPath: string;
   tags?: string[];
   quickLinks?: LinkItem[];
+  compact?: boolean;
 }
 
 export default function ApiReferencePage({
@@ -24,6 +25,7 @@ export default function ApiReferencePage({
   specPath,
   tags = [],
   quickLinks = [],
+  compact = false,
 }: ApiReferencePageProps) {
   return (
     <Layout title={`${title} API`} description={description}>
@@ -31,12 +33,12 @@ export default function ApiReferencePage({
         <div className="api-docs-shell">
           <div className={styles.page}>
             <section className={styles.hero}>
-              <div className={styles.heroCard}>
+              <div className={compact ? styles.heroCardCompact : styles.heroCard}>
                 <span className={styles.eyebrow}>API Reference</span>
                 <h1 className={styles.heroTitle}>{title}</h1>
                 <p className={styles.heroDescription}>{description}</p>
 
-                {tags.length > 0 ? (
+                {!compact && tags.length > 0 ? (
                   <div className={styles.tagRow}>
                     {tags.map((tag) => (
                       <span key={tag} className={styles.tag}>
@@ -46,19 +48,21 @@ export default function ApiReferencePage({
                   </div>
                 ) : null}
 
-                <div className={styles.heroActions}>
-                  {quickLinks.map((item) =>
-                    item.external ? (
-                      <a key={item.label} className={styles.heroLink} href={item.href}>
-                        {item.label}
-                      </a>
-                    ) : (
-                      <Link key={item.label} className={styles.heroLink} to={item.href}>
-                        {item.label}
-                      </Link>
-                    )
-                  )}
-                </div>
+                {!compact && quickLinks.length > 0 ? (
+                  <div className={styles.heroActions}>
+                    {quickLinks.map((item) =>
+                      item.external ? (
+                        <a key={item.label} className={styles.heroLink} href={item.href}>
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link key={item.label} className={styles.heroLink} to={item.href}>
+                          {item.label}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                ) : null}
               </div>
             </section>
 

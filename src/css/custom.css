@@ -289,7 +289,7 @@ h6,
 
 .navbar__item.dropdown .dropdown__menu {
   min-width: 11rem;
-  margin-top: 0.35rem;
+  margin-top: 0;
   border: 1px solid var(--doc-border-soft);
   border-radius: 18px;
   background: var(--doc-surface-panel);
@@ -309,6 +309,18 @@ h6,
 .navbar__item.dropdown .dropdown__link--active {
   background: var(--doc-brand-gradient-soft);
   color: var(--ifm-heading-color);
+}
+
+.navbar__item.dropdown > .navbar__link.navbar-api-dropdown {
+  padding-right: 0.72rem !important;
+}
+
+.navbar__item.dropdown > .navbar__link.navbar-api-dropdown::before,
+.navbar__item.dropdown > .navbar__link.navbar-api-dropdown::after,
+.navbar__item.dropdown > .navbar__link.navbar-api-dropdown svg,
+.navbar__item.dropdown > .navbar__link.navbar-api-dropdown [class*="caret"] {
+  display: none !important;
+  content: none !important;
 }
 
 [data-theme="dark"] .navbar__item.dropdown .dropdown__menu {

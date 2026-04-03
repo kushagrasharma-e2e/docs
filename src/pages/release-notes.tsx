@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
@@ -102,29 +102,200 @@ function FilterField({
   value,
   onChange,
   items,
+  isOpen,
+  onOpenChange,
 }: {
   id: string;
   label: string;
   value: string;
   onChange: (value: string) => void;
   items: Array<{ label: string; value: string }>;
+  isOpen: boolean;
+  onOpenChange: (isOpen: boolean) => void;
 }) {
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const optionRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const labelId = useId();
+  const menuId = useId();
+  const selectedIndex = Math.max(
+    0,
+    items.findIndex((item) => item.value === value)
+  );
+  const [activeIndex, setActiveIndex] = useState(selectedIndex);
+  const safeActiveIndex = Math.min(activeIndex, Math.max(items.length - 1, 0));
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    setActiveIndex(selectedIndex);
+  }, [isOpen, selectedIndex]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: MouseEvent | TouchEvent) => {
+      if (rootRef.current && !rootRef.current.contains(event.target as Node)) {
+        onOpenChange(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+    };
+  }, [isOpen, onOpenChange]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const activeOption = optionRefs.current[safeActiveIndex];
+
+    requestAnimationFrame(() => {
+      menuRef.current?.focus();
+      activeOption?.scrollIntoView({ block: "nearest" });
+    });
+  }, [isOpen, safeActiveIndex]);
+
+  const closeMenu = (focusButton = false) => {
+    onOpenChange(false);
+
+    if (focusButton) {
+      buttonRef.current?.focus();
+    }
+  };
+
+  const selectValue = (nextValue: string) => {
+    onChange(nextValue);
+    closeMenu(true);
+  };
+
   return (
-    <label className={styles.filterField} htmlFor={id}>
-      <span>{label}</span>
-      <select
-        id={id}
-        className={styles.select}
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-      >
-        {items.map((item) => (
-          <option key={item.value} value={item.value}>
-            {item.label}
-          </option>
-        ))}
-      </select>
-    </label>
+    <div className={styles.filterField} ref={rootRef}>
+      <span className={styles.filterLabel} id={labelId}>
+        {label}
+      </span>
+      <div className={styles.dropdownShell}>
+        <button
+          ref={buttonRef}
+          id={id}
+          type="button"
+          className={styles.dropdownButton}
+          aria-haspopup="listbox"
+          aria-expanded={isOpen}
+          aria-controls={`${menuId}-options`}
+          aria-labelledby={`${labelId} ${id}-value`}
+          onClick={() => onOpenChange(!isOpen)}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+              event.preventDefault();
+              onOpenChange(true);
+            }
+          }}
+        >
+          <span id={`${id}-value`} className={styles.dropdownValue}>
+            {items[selectedIndex]?.label ?? value}
+          </span>
+          <span className={styles.dropdownChevron} aria-hidden="true" />
+        </button>
+
+        {isOpen ? (
+          <div
+            ref={menuRef}
+            id={`${menuId}-options`}
+            className={styles.dropdownMenu}
+            role="listbox"
+            aria-labelledby={labelId}
+            aria-activedescendant={`${menuId}-option-${safeActiveIndex}`}
+            tabIndex={0}
+            onKeyDown={(event) => {
+              if (items.length === 0) {
+                return;
+              }
+
+              if (event.key === "ArrowDown") {
+                event.preventDefault();
+                setActiveIndex((current) => (current + 1) % items.length);
+                return;
+              }
+
+              if (event.key === "ArrowUp") {
+                event.preventDefault();
+                setActiveIndex((current) => (current - 1 + items.length) % items.length);
+                return;
+              }
+
+              if (event.key === "Home") {
+                event.preventDefault();
+                setActiveIndex(0);
+                return;
+              }
+
+              if (event.key === "End") {
+                event.preventDefault();
+                setActiveIndex(items.length - 1);
+                return;
+              }
+
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                selectValue(items[safeActiveIndex]?.value ?? value);
+                return;
+              }
+
+              if (event.key === "Escape") {
+                event.preventDefault();
+                closeMenu(true);
+              }
+            }}
+          >
+            {items.map((item, index) => {
+              const isSelected = item.value === value;
+              const isActive = index === safeActiveIndex;
+
+              return (
+                <div
+                  key={item.value}
+                  id={`${menuId}-option-${index}`}
+                  ref={(node) => {
+                    optionRefs.current[index] = node;
+                  }}
+                  className={clsx(styles.dropdownOption, {
+                    [styles.dropdownOptionSelected]: isSelected,
+                    [styles.dropdownOptionActive]: isActive,
+                  })}
+                  role="option"
+                  aria-selected={isSelected}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onMouseDown={(event) => {
+                    event.preventDefault();
+                  }}
+                  onClick={() => selectValue(item.value)}
+                >
+                  <span
+                    className={clsx(styles.dropdownOptionIndicator, {
+                      [styles.dropdownOptionIndicatorSelected]: isSelected,
+                    })}
+                    aria-hidden="true"
+                  />
+                  <span>{item.label}</span>
+                </div>
+              );
+            })}
+          </div>
+        ) : null}
+      </div>
+    </div>
   );
 }
 
@@ -184,6 +355,7 @@ export default function ReleaseNotes(): ReactNode {
   const [selectedPlatform, setSelectedPlatform] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [openFilterId, setOpenFilterId] = useState<string | null>(null);
 
   const filteredProducts = useMemo(() => {
     const scoped = allData.filter((note) => {
@@ -287,6 +459,8 @@ export default function ReleaseNotes(): ReactNode {
                 label="Platform"
                 value={selectedPlatform}
                 onChange={setSelectedPlatform}
+                isOpen={openFilterId === "platform-filter"}
+                onOpenChange={(isOpen) => setOpenFilterId(isOpen ? "platform-filter" : null)}
                 items={[
                   { label: "All platforms", value: "All" },
                   { label: "MyAccount", value: "MyAccount" },
@@ -299,6 +473,8 @@ export default function ReleaseNotes(): ReactNode {
                 label="Product"
                 value={selectedProduct}
                 onChange={setSelectedProduct}
+                isOpen={openFilterId === "product-filter"}
+                onOpenChange={(isOpen) => setOpenFilterId(isOpen ? "product-filter" : null)}
                 items={[
                   { label: "All products", value: "All" },
                   ...filteredProducts.map((product) => ({
@@ -316,6 +492,8 @@ export default function ReleaseNotes(): ReactNode {
                   setItemsPerPage(Number(value));
                   setCurrentPage(1);
                 }}
+                isOpen={openFilterId === "per-page-filter"}
+                onOpenChange={(isOpen) => setOpenFilterId(isOpen ? "per-page-filter" : null)}
                 items={[5, 10, 25, 50].map((count) => ({
                   label: String(count),
                   value: String(count),
